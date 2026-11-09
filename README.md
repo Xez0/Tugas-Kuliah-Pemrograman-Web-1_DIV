@@ -89,9 +89,7 @@ Tugas-Kuliah-Pemrograman-Web-1_DIV/
 │   ├── bromo.jpg               # Destinasi Gunung Bromo, Jawa Timur
 │   ├── labuan-bajo.jpg         # Destinasi Labuan Bajo & Komodo, NTT
 │   ├── nusa-penida.jpg         # Destinasi Nusa Penida, Bali
-│   ├── kawah-ijen.jpg          # Destinasi Kawah Ijen Blue Fire, Jawa Timur
-│   ├── cappadocia.jpg          # Aset Cadangan
-│   └── kyoto.jpg               # Aset Cadangan
+│   └── kawah-ijen.jpg          # Destinasi Kawah Ijen Blue Fire, Jawa Timur
 ├── screenshot_index.png        # Tangkapan Layar Tampilan Asli Halaman Beranda
 ├── screenshot_destinasi.png    # Tangkapan Layar Tampilan Asli Halaman Destinasi
 ├── screenshot_paket.png        # Tangkapan Layar Tampilan Asli Halaman Paket Layanan
