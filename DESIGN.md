@@ -44,3 +44,4 @@
 - **Jarak Margin Antarkolom:** `14px` (7 × 2 px)
 - **Tinggi Minimum Content:** `240px` (200 + 2 × 20 px)
 - **Layout Wajib:** Header, Sidebar Kiri, Content Dua Bagian, Footer.
+

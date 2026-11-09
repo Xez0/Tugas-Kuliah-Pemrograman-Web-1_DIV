@@ -76,8 +76,9 @@ $$\begin{aligned}
 
 ```
 Tugas-Kuliah-Pemrograman-Web-1_DIV/
-├── index.html                  # Halaman Beranda Utama (Header, Sidebar Kiri, Content 2 Bagian, Footer)
+├── index.html                  # Halaman Beranda Utama (Header 100px, Sidebar Kiri, Content 2 Bagian, Footer)
 ├── destinasi.html              # Halaman Katalog Wisata (Filter Interaktif, Dua Kolom Destinasi)
+├── paket.html                  # Halaman Paket Layanan Wisata (Rincian Fasilitas, Harga & Tombol Pesan)
 ├── kontak.html                 # Halaman Kontak & Reservasi (Formulir Pendaftaran & Validasi Input)
 ├── style.css                   # Berkas Eksternal CSS Tata Letak DIV & Aturan Formula NIM
 ├── DESIGN.md                   # Spesifikasi Token Desain, Palet Warna & Prinsip Anti-Slop
@@ -93,7 +94,9 @@ Tugas-Kuliah-Pemrograman-Web-1_DIV/
 │   └── kyoto.jpg               # Aset Cadangan
 ├── screenshot_index.png        # Tangkapan Layar Tampilan Asli Halaman Beranda
 ├── screenshot_destinasi.png    # Tangkapan Layar Tampilan Asli Halaman Destinasi
+├── screenshot_paket.png        # Tangkapan Layar Tampilan Asli Halaman Paket Layanan
 ├── screenshot_kontak.png       # Tangkapan Layar Tampilan Asli Halaman Kontak
+├── screenshot_header.png       # Tangkapan Layar Detail Header Redesain
 ├── test_e2e.py                 # Suite Pengujian Otomatis End-to-End (Playwright)
 ├── laporan/                    # Laporan Praktikum Resmi Siap Cetak
 │   ├── Laporan_Praktikum_DIV_CSS_241011402572.pdf # Format PDF Resmi Standar A4
