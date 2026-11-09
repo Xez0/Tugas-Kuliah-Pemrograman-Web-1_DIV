@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak & Reservasi - NusantaraVenture | Travel Wisata</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- WRAPPER UTAMA (Formula NIM: Lebar = 840px) -->
+    <div id="wrapper" class="wrapper">
+        
+        <!-- HEADER (Formula NIM: Tinggi = 100px) -->
+        <div id="header" class="header">
+            <div class="header-content">
+                <div class="header-brand">
+                    <div class="logo-circle">&#9992;</div>
+                    <div class="brand-info">
+                        <h1 class="site-title">NusantaraVenture</h1>
+                        <p class="site-tagline">Pusat Layanan Pelanggan & Reservasi Tiket Wisata</p>
+                    </div>
+                </div>
+                <div class="nim-identity-badge">
+                    <span class="badge-label">Kontak & Reservasi</span>
+                    <span class="badge-nim">NIM: 241011402572</span>
+                    <span class="badge-theme">Tema: Travel Wisata</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CONTAINER (Wadah Area Utama & Kolom) -->
+        <div id="main-container" class="main-container clearfix">
+            
+            <!-- SIDEBAR KIRI (Formula NIM: Lebar = 25% / 210px, Margin Antarkolom = 14px) -->
+            <div id="sidebar" class="sidebar">
+                
+                <!-- Box Navigasi -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Menu Utama</h3>
+                    <ul class="nav-links">
+                        <li><a href="index.html">&#127968; Beranda</a></li>
+                        <li><a href="destinasi.html">&#127757; Destinasi Populer</a></li>
+                        <li><a href="index.html#content-columns">&#127957; Paket Wisata</a></li>
+                        <li><a href="kontak.html" class="active">&#128222; Kontak & Reservasi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Box Bantuan Cepat -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Pusat Bantuan</h3>
+                    <p style="font-size: 10.5px; color: #475569; margin-bottom: 8px;">Tim kami siap melayani pertanyaan seputar jadwal tur, pembatalan, dan kustomisasi perjalanan.</p>
+                    <p style="font-size: 11px; font-weight: 600; color: #0077b6;">&#9200; Buka 24/7 Setiap Hari</p>
+                </div>
+
+                <!-- Box Mahasiswa -->
+                <div class="sidebar-widget student-widget">
+                    <h3 class="widget-title">Pengembang Web</h3>
+                    <div class="student-info-card">
+                        <p class="student-name"><strong>Hadi Sulaiman</strong></p>
+                        <p class="student-detail"><strong>NIM:</strong> 241011402572</p>
+                        <p class="student-detail"><strong>Kelas:</strong> 05TPLM003</p>
+                        <p class="student-detail"><strong>Mata Kuliah:</strong> Web 1</p>
+                    </div>
+                </div>
+
+                <!-- Box Garansi Layanan -->
+                <div class="sidebar-widget promo-widget" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-color: #86efac;">
+                    <h3 class="widget-title" style="border-bottom-color: #16a34a; color: #15803d;">Garansi 100%</h3>
+                    <p class="promo-desc" style="color: #166534;">Jaminan pengembalian dana penuh jika jadwal keberangkatan dibatalkan oleh pihak cuaca ekstrem.</p>
+                </div>
+
+            </div>
+
+            <!-- CONTENT AREA (Formula NIM: Min-Height = 240px, Content Dua Bagian) -->
+            <div id="content" class="content-area">
+                
+                <!-- Section Header Konten -->
+                <div class="hero-banner" style="padding: 16px 20px;">
+                    <div class="hero-text">
+                        <h2 style="font-size: 17px; margin-bottom: 4px;">Formulir Kontak & Reservasi</h2>
+                        <p style="font-size: 11px; margin-bottom: 0;">Silakan lengkapi formulir di bawah ini untuk konsultasi jadwal tur atau pemesanan paket wisata impian Anda.</p>
+                    </div>
+                </div>
+
+                <!-- CONTENT DUA BAGIAN (Two-Column Content Area) -->
+                <div class="content-two-columns clearfix">
+                    
+                    <!-- KONTEN BAGIAN 1: FORMULIR PEMESANAN -->
+                    <div id="content-kolom-1" class="content-col col-left">
+                        <div class="col-header">
+                            <span class="col-icon">&#9997;</span>
+                            <h3 class="col-title">Kirim Pesan / Booking</h3>
+                        </div>
+
+                        <div class="contact-form-box">
+                            <form action="#" method="post" onsubmit="event.preventDefault(); alert('Terima kasih! Permintaan reservasi Anda telah terkirim.');">
+                                <div class="form-group">
+                                    <label for="nama" class="form-label">Nama Lengkap:</label>
+                                    <input type="text" id="nama" class="form-input" placeholder="Masukkan nama Anda..." required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Alamat Email:</label>
+                                    <input type="email" id="email" class="form-input" placeholder="nama@email.com..." required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="telepon" class="form-label">Nomor WhatsApp:</label>
+                                    <input type="tel" id="telepon" class="form-input" placeholder="08xxxxxxxxxx..." required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="destinasi" class="form-label">Pilihan Destinasi:</label>
+                                    <select id="destinasi" class="form-input">
+                                        <option value="raja-ampat">Kepulauan Raja Ampat (Papua)</option>
+                                        <option value="labuan-bajo">Labuan Bajo & Komodo (NTT)</option>
+                                        <option value="bromo">Taman Nasional Bromo (Jatim)</option>
+                                        <option value="nusa-penida">Nusa Penida Island (Bali)</option>
+                                        <option value="kawah-ijen">Blue Fire Kawah Ijen (Jatim)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="pesan" class="form-label">Catatan Tambahan:</label>
+                                    <textarea id="pesan" rows="3" class="form-input" placeholder="Tuliskan jumlah peserta atau permintaan khusus..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn-submit">Kirim Reservasi Sekarang</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- KONTEN BAGIAN 2: INFORMASI KANTOR & HUBUNGI -->
+                    <div id="content-kolom-2" class="content-col col-right">
+                        <div class="col-header">
+                            <span class="col-icon">&#128205;</span>
+                            <h3 class="col-title">Kantor Operasional</h3>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <h4 style="font-size: 12px; color: #0d3b66; margin-bottom: 6px;">Kantor Pusat NusantaraVenture</h4>
+                            <p class="info-line">&#128205; <strong>Alamat:</strong> Jl. Surya Kencana No. 1, Pamulang Barat, Tangerang Selatan, Banten 15417</p>
+                            <p class="info-line">&#128222; <strong>Telepon:</strong> (021) 741-2566</p>
+                            <p class="info-line">&#128241; <strong>WhatsApp:</strong> +62 851-5029-9425</p>
+                            <p class="info-line">&#9993; <strong>Email:</strong> support@nusantaraventure.id</p>
+                            
+                            <hr style="margin: 10px 0; border: none; border-top: 1px solid #e2e8f0;">
+                            
+                            <h4 style="font-size: 12px; color: #0d3b66; margin-bottom: 6px;">Jam Layanan Konsultasi</h4>
+                            <p class="info-line">&#128197; <strong>Senin - Jumat:</strong> 08.00 - 20.00 WIB</p>
+                            <p class="info-line">&#128197; <strong>Sabtu - Minggu:</strong> 09.00 - 17.00 WIB</p>
+                            <p class="info-line" style="color: #16a34a; font-weight: 600;">&#128308; Tim Emergency Call: Siaga 24 Jam</p>
+
+                            <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px; border-radius: 4px; margin-top: 10px;">
+                                <p style="font-size: 10px; color: #166534; line-height: 1.4;">
+                                    <strong>Tips Perjalanan:</strong> Pastikan melakukan konfirmasi jadwal keberangkatan minimal 7 hari kerja sebelum tanggal tur pilihan Anda.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER (Bagian Penutup Layout) -->
+        <div id="footer" class="footer">
+            <div class="footer-columns clearfix">
+                <div class="footer-col footer-about">
+                    <h4 class="footer-heading">&#9992; NusantaraVenture</h4>
+                    <p class="footer-text">Platform terdepan penyedia tur wisata eksplorasi alam dan kepulauan Indonesia secara aman, profesional, dan berkesan.</p>
+                </div>
+                <div class="footer-col footer-links">
+                    <h4 class="footer-heading">Navigasi Halaman</h4>
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="destinasi.html">Destinasi</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-academic">
+                    <h4 class="footer-heading">Informasi Akademik</h4>
+                    <p class="footer-text">Tugas Pemrograman Web 1 (DIV & CSS)</p>
+                    <p class="footer-text">Nama: Hadi Sulaiman | NIM: 241011402572</p>
+                    <p class="footer-text">Universitas Pamulang &copy; 2026</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NusantaraVenture. Hak Cipta Dilindungi Undang-Undang. Dibuat untuk Penugasan Web 1.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
