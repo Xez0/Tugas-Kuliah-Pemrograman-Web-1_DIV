@@ -277,16 +277,12 @@
 
     </div>
 
-    <!-- Script Interaktif Penanganan Formulir -->
+    <!-- Script Interaktif Penanganan Formulir (Native Platform Reset) -->
     <script>
         function handleFormSubmit(e) {
             e.preventDefault();
-            const alertBox = document.getElementById('form-alert');
-            alertBox.style.display = 'block';
-            document.getElementById('input-nama').value = '';
-            document.getElementById('input-email').value = '';
-            document.getElementById('input-telepon').value = '';
-            document.getElementById('input-peserta').value = '';
+            document.getElementById('form-alert').style.display = 'block';
+            e.target.reset();
         }
     </script>
 
