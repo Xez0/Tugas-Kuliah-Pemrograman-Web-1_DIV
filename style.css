@@ -6,7 +6,10 @@
    TEMA WEBSITE   : TRAVEL WISATA (NUSANTARAVENTURE)
    LAYOUT WAJIB   : HEADER, SIDEBAR KIRI, CONTENT DUA BAGIAN, FOOTER
 
-   TABEL FORMULA PERHITUNGAN CSS BERDASARKAN 5 DIGIT TERAKHIR NIM (0 2 5 7 2):
+   DESAIN SISTEM  : EDITORIAL ARCHIPELAGO EXPEDITION JOURNAL (ANTI-SLOP)
+   BEBAS EM-DASH, BEBAS EMOJI, BEBAS PILL-BADGE KAPSUL GENERIK
+
+   FORMULA PERHITUNGAN CSS BERDASARKAN 5 DIGIT TERAKHIR NIM (0 2 5 7 2):
    - Digit ke-1 (0 -> diganti 7) : Lebar wrapper = 700 + (7 x 20) = 840px
    - Digit ke-2 (2)              : Tinggi header = 80 + (2 x 10) = 100px
    - Digit ke-3 (5)              : Lebar sidebar = 15 + (5 x 2)% = 25% (210px)
@@ -14,54 +17,87 @@
    - Digit ke-5 (2)              : Tinggi minimum content = 200 + (2 x 20) = 240px
    ========================================================================== */
 
-/* 1. RESET DAN PENGATURAN DASAR */
+/* 1. RESET DAN ROOT VARIABLES */
+:root {
+    --color-ink: #0f1b26;
+    --color-canvas: #f8f6f2;
+    --color-surface: #ffffff;
+    --color-border: #e2ded7;
+    --color-border-dark: #c8c2b7;
+    --color-accent-terracotta: #b85435;
+    --color-accent-terracotta-hover: #9c4328;
+    --color-accent-lagoon: #1d4e5f;
+    --color-text-muted: #5a6773;
+    --color-text-subtle: #7a8793;
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f1f5f9;
-    color: #1e293b;
-    line-height: 1.6;
-    font-size: 13px;
+::selection {
+    background-color: #b85435;
+    color: #ffffff;
 }
 
-/* Clearfix Helper untuk Sistem Layout Float DIV */
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    line-height: 1.6;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Helper Clearfix Float DIV */
 .clearfix::after {
     content: "";
     display: table;
     clear: both;
 }
 
+/* Aksesibilitas Fokus Keyboard */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--color-accent-terracotta);
+    outline-offset: 2px;
+}
+
 /* ==========================================================================
    2. ATURAN FORMULA DIGIT KE-1: LEBAR WRAPPER (840px)
-   Rumus: 700 + (7 x 20) = 840px (digit 0 diganti 7 sesuai aturan)
+   Rumus: 700 + (7 x 20) = 840px (digit 0 diganti 7 sesuai aturan penugasan)
    ========================================================================== */
 #wrapper,
 .wrapper {
     width: 840px; /* Nilai Eksak Formula NIM */
-    margin: 30px auto;
-    background-color: #ffffff;
-    box-shadow: 0 12px 35px rgba(13, 59, 102, 0.15);
-    border-radius: 8px;
+    margin: 32px auto;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
     overflow: hidden;
-    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 20px rgba(15, 27, 38, 0.06);
 }
 
 /* ==========================================================================
    3. ATURAN FORMULA DIGIT KE-2: TINGGI HEADER (100px)
    Rumus: 80 + (2 x 10) = 100px
+   Gaya: Basalt Slate Maritim Editorial dengan Garis Aksen Terakota
    ========================================================================== */
 #header,
 .header {
     height: 100px; /* Nilai Eksak Formula NIM */
-    background: linear-gradient(135deg, #0d3b66 0%, #0077b6 100%);
+    background-color: var(--color-ink);
     color: #ffffff;
     padding: 0 20px;
-    border-bottom: 4px solid #f4a261;
+    border-bottom: 3px solid var(--color-accent-terracotta);
     position: relative;
 }
 
@@ -75,65 +111,69 @@ body {
 .header-brand {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
 }
 
-.logo-circle {
-    width: 52px;
-    height: 52px;
-    background: rgba(255, 255, 255, 0.15);
-    border: 2px solid #f4a261;
-    border-radius: 50%;
+.brand-symbol {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 26px;
     color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.brand-info .site-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: #ffffff;
-    line-height: 1.2;
+.brand-symbol svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
 }
 
-.brand-info .site-tagline {
+.brand-text .site-title {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    color: #ffffff;
+    line-height: 1.15;
+}
+
+.brand-text .site-tagline {
     font-size: 11px;
-    color: #caf0f8;
+    color: #a4b3c1;
+    font-weight: 400;
     letter-spacing: 0.2px;
 }
 
-.nim-identity-badge {
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    padding: 8px 14px;
-    border-radius: 6px;
+.header-academic-tag {
     text-align: right;
-    display: flex;
-    flex-direction: column;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    padding-left: 14px;
 }
 
-.badge-label {
-    font-size: 9px;
-    color: #f4a261;
-    font-weight: 700;
+.academic-label {
+    display: block;
+    font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    color: var(--color-accent-terracotta);
+    font-weight: 700;
 }
 
-.badge-nim {
-    font-size: 13px;
-    font-weight: 700;
+.academic-meta {
+    font-size: 12px;
+    font-weight: 600;
     color: #ffffff;
 }
 
-.badge-theme {
-    font-size: 11px;
-    color: #e0f2fe;
+.academic-sub {
+    font-size: 10.5px;
+    color: #a4b3c1;
 }
 
 /* ==========================================================================
@@ -145,7 +185,8 @@ body {
 .main-container {
     width: 840px;
     padding: 16px 14px;
-    background-color: #fafbfc;
+    background-color: var(--color-canvas);
+    border-bottom: 1px solid var(--color-border);
 }
 
 /* ==========================================================================
@@ -157,152 +198,143 @@ body {
 #sidebar,
 .sidebar {
     float: left;
-    width: 200px;
-    margin-right: 14px; /* Formula NIM Digit ke-4: Margin Antarkolom = 14px */
+    width: 200px;          /* 25% proporsional dalam area ber-padding */
+    margin-right: 14px;    /* Formula NIM Digit ke-4: Margin Antarkolom = 14px */
 }
 
-/* Widget Sidebar */
-.sidebar-widget {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
+/* Widget Sidebar Editorial */
+.sidebar-panel {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
     padding: 12px;
     margin-bottom: 14px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 }
 
-.widget-title {
-    font-size: 12px;
+.panel-title {
+    font-family: var(--font-heading);
+    font-size: 11.5px;
     font-weight: 700;
-    color: #0d3b66;
+    color: var(--color-ink);
     padding-bottom: 6px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #0077b6;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--color-border-dark);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.panel-title svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--color-accent-terracotta);
+    fill: none;
+    stroke-width: 1.8;
 }
 
 /* Navigasi Sidebar */
-.nav-links {
+.editorial-nav {
     list-style: none;
 }
 
-.nav-links li {
-    margin-bottom: 6px;
-}
-
-.nav-links li:last-child {
-    margin-bottom: 0;
-}
-
-.nav-links a {
-    display: block;
-    padding: 7px 10px;
-    color: #334155;
-    text-decoration: none;
-    font-size: 11px;
-    font-weight: 500;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    background-color: #f8fafc;
-    border-left: 3px solid transparent;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    background-color: #e0f2fe;
-    color: #0077b6;
-    border-left: 3px solid #0077b6;
-    font-weight: 600;
-}
-
-/* Widget Info Mahasiswa */
-.student-widget {
-    background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
-    border-color: #bbf7d0;
-}
-
-.student-widget .widget-title {
-    border-bottom-color: #22c55e;
-    color: #15803d;
-}
-
-.student-info-card {
-    font-size: 11px;
-}
-
-.avatar-placeholder {
-    font-size: 28px;
-    text-align: center;
+.editorial-nav li {
     margin-bottom: 4px;
 }
 
-.student-name {
-    font-size: 12px;
-    color: #0f172a;
-    margin-bottom: 6px;
-    text-align: center;
-}
-
-.student-detail {
-    color: #475569;
-    margin-bottom: 3px;
-    padding: 2px 0;
-    border-bottom: 1px dashed #e2e8f0;
-    font-size: 10.5px;
-}
-
-/* Widget Promo */
-.promo-widget {
-    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
-    border-color: #fed7aa;
-    text-align: center;
-}
-
-.promo-widget .widget-title {
-    border-bottom-color: #ea580c;
-    color: #c2410c;
-}
-
-.promo-discount {
-    display: inline-block;
-    background-color: #ea580c;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 10px;
-    padding: 3px 8px;
-    border-radius: 10px;
-    margin-bottom: 6px;
-}
-
-.promo-desc {
-    font-size: 10.5px;
-    color: #7c2d12;
-    margin-bottom: 8px;
-    line-height: 1.4;
-}
-
-.btn-sidebar {
-    display: inline-block;
-    background-color: #ea580c;
-    color: #ffffff;
+.editorial-nav a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    color: var(--color-ink);
     text-decoration: none;
-    font-size: 10.5px;
+    font-size: 11.5px;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.editorial-nav a svg {
+    width: 13px;
+    height: 13px;
+    stroke: var(--color-text-subtle);
+    fill: none;
+    stroke-width: 1.6;
+}
+
+.editorial-nav a:hover {
+    background-color: #ede9e1;
+    color: var(--color-accent-terracotta);
+}
+
+.editorial-nav a.active {
+    background-color: var(--color-ink);
+    color: #ffffff;
     font-weight: 600;
-    padding: 5px 12px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
 }
 
-.btn-sidebar:hover {
-    background-color: #c2410c;
+.editorial-nav a.active svg {
+    stroke: #ffffff;
 }
 
-/* Widget Kontak Cepat */
-.contact-widget .contact-item {
+/* Panel Identitas Akademik */
+.student-data-table {
+    width: 100%;
     font-size: 10.5px;
-    color: #475569;
-    margin-bottom: 5px;
+    border-collapse: collapse;
+}
+
+.student-data-table td {
+    padding: 3px 0;
+    vertical-align: top;
+}
+
+.student-data-table td.label {
+    color: var(--color-text-muted);
+    width: 50px;
+    font-weight: 500;
+}
+
+.student-data-table td.val {
+    color: var(--color-ink);
+    font-weight: 600;
+}
+
+/* Panel Catatan Musim Pelayaran (Bukan promo AI generik) */
+.field-note-text {
+    font-size: 10.5px;
+    color: var(--color-text-muted);
+    line-height: 1.45;
+    margin-bottom: 8px;
+}
+
+.field-note-highlight {
+    color: var(--color-accent-terracotta);
+    font-weight: 600;
+}
+
+.link-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-accent-terracotta);
+    font-size: 10.5px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.link-action:hover {
+    text-decoration: underline;
+}
+
+.link-action svg {
+    width: 11px;
+    height: 11px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
 }
 
 /* ==========================================================================
@@ -320,48 +352,39 @@ body {
     min-height: 240px;     /* Formula NIM Digit ke-5: Min-Height = 240px */
 }
 
-/* Hero Banner Konten */
-.hero-banner {
-    background: linear-gradient(rgba(13, 59, 102, 0.75), rgba(0, 119, 182, 0.75)), url('images/hero-marine.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
-    padding: 22px;
-    border-radius: 6px;
+/* Editorial Lead Banner */
+.editorial-lead {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 16px;
     margin-bottom: 14px;
-    box-shadow: 0 4px 10px rgba(13, 59, 102, 0.1);
+    position: relative;
 }
 
-.hero-text h2 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 19px;
+.editorial-meta-top {
+    font-size: 10px;
     font-weight: 700;
-    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--color-accent-terracotta);
+    margin-bottom: 4px;
+}
+
+.editorial-lead h2 {
+    font-family: var(--font-serif);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-ink);
     line-height: 1.3;
+    margin-bottom: 6px;
 }
 
-.hero-text p {
+.editorial-lead p {
     font-size: 11.5px;
-    color: #e0f2fe;
-    margin-bottom: 12px;
+    color: var(--color-text-muted);
     line-height: 1.5;
-}
-
-.btn-hero {
-    display: inline-block;
-    background-color: #f4a261;
-    color: #0f172a;
-    font-weight: 600;
-    font-size: 11px;
-    padding: 7px 16px;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-}
-
-.btn-hero:hover {
-    background-color: #e76f51;
-    color: #ffffff;
+    max-width: 72ch;
 }
 
 /* ==========================================================================
@@ -378,7 +401,7 @@ body {
 
 .content-col {
     float: left;
-    width: 292px;          /* Proporsi eksak kolom 1 & kolom 2 */
+    width: 292px;          /* Proporsi simetris dua bagian */
     min-height: 240px;     /* Formula NIM Digit ke-5: Min-Height = 240px */
 }
 
@@ -390,52 +413,53 @@ body {
     margin-right: 0;
 }
 
-.col-header {
+.zone-header {
+    background-color: var(--color-ink);
+    color: #ffffff;
+    padding: 7px 10px;
+    border-radius: 3px 3px 0 0;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-left: 4px solid #0077b6;
-    padding: 8px 12px;
-    border-radius: 4px;
-    margin-bottom: 12px;
 }
 
-.col-icon {
-    font-size: 15px;
-}
-
-.col-title {
-    font-size: 12.5px;
+.zone-title {
+    font-size: 11px;
     font-weight: 700;
-    color: #0d3b66;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* Kartu Destinasi */
-.destination-card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    overflow: hidden;
+.zone-tag {
+    font-size: 9.5px;
+    color: #d1d9e0;
+    font-weight: 500;
+}
+
+/* Kartu Destinasi Bergaya Jurnal Ekspedisi */
+.expedition-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-top: none;
     margin-bottom: 14px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 0 0 3px 3px;
+    overflow: hidden;
 }
 
-.destination-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(13, 59, 102, 0.1);
+.expedition-card.card-standalone {
+    border-top: 1px solid var(--color-border);
+    border-radius: 3px;
 }
 
-.card-image-wrap {
+.expedition-visual {
     position: relative;
     width: 100%;
-    height: 120px;
+    height: 125px;
+    background-color: #1a2a38;
     overflow: hidden;
 }
 
-.card-img {
+.expedition-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -443,90 +467,222 @@ body {
     transition: transform 0.3s ease;
 }
 
-.destination-card:hover .card-img {
-    transform: scale(1.05);
+.expedition-card:hover .expedition-img {
+    transform: scale(1.03);
 }
 
-.card-tag {
+.geo-tag {
     position: absolute;
-    top: 8px;
-    right: 8px;
-    background-color: rgba(13, 59, 102, 0.85);
+    bottom: 6px;
+    left: 6px;
+    background-color: rgba(15, 27, 38, 0.88);
     color: #ffffff;
     font-size: 9.5px;
     font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 10px;
+    padding: 2px 6px;
+    border-radius: 2px;
+    letter-spacing: 0.2px;
 }
 
-.card-content {
-    padding: 12px;
+.expedition-details {
+    padding: 11px;
 }
 
-.card-title {
-    font-size: 12.5px;
+.expedition-name {
+    font-family: var(--font-heading);
+    font-size: 13px;
     font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 3px;
+    color: var(--color-ink);
+    margin-bottom: 4px;
+    line-height: 1.25;
 }
 
-.card-location {
+.expedition-route {
     font-size: 10.5px;
-    color: #0077b6;
-    font-weight: 500;
+    color: var(--color-accent-lagoon);
+    font-weight: 600;
     margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
-.card-text {
+.expedition-route svg {
+    width: 11px;
+    height: 11px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.8;
+}
+
+.expedition-narrative {
     font-size: 10.5px;
-    color: #64748b;
+    color: var(--color-text-muted);
+    line-height: 1.45;
     margin-bottom: 10px;
-    line-height: 1.4;
 }
 
-.card-footer-info {
+.expedition-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #f1f5f9;
     padding-top: 8px;
+    border-top: 1px solid #f0eee9;
 }
 
-.price-val {
-    font-size: 11.5px;
-    font-weight: 700;
-    color: #e76f51;
+.tariff-block {
+    display: flex;
+    flex-direction: column;
 }
 
-.btn-card {
-    display: inline-block;
-    background-color: #0077b6;
+.tariff-label {
+    font-size: 9px;
+    color: var(--color-text-subtle);
+    text-transform: uppercase;
+}
+
+.tariff-amount {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--color-accent-terracotta);
+}
+
+.btn-editorial {
+    background-color: var(--color-ink);
     color: #ffffff;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 10.5px;
     font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 3px;
-    transition: background-color 0.2s;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--color-ink);
+    transition: background-color 0.15s, border-color 0.15s;
+    cursor: pointer;
 }
 
-.btn-card:hover {
-    background-color: #0d3b66;
+.btn-editorial:hover {
+    background-color: var(--color-accent-terracotta);
+    border-color: var(--color-accent-terracotta);
+}
+
+.btn-editorial svg {
+    width: 10px;
+    height: 10px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
 }
 
 /* ==========================================================================
-   8. FORMULIR & KARTU INFORMASI KONTAK (HALAMAN KONTAK)
+   8. TABEL SPESIFIKASI FORMULA NIM (LEMBAR KERJA AKADEMIK)
    ========================================================================== */
-.contact-form-box,
-.contact-info-card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    padding: 14px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+.spec-ledger {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 12px;
+    margin-top: 6px;
 }
 
-.form-group {
+.ledger-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--color-border-dark);
+}
+
+.ledger-title {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--color-ink);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.ledger-badge {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--color-accent-terracotta);
+}
+
+.ledger-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10.5px;
+}
+
+.ledger-table th,
+.ledger-table td {
+    border: 1px solid var(--color-border);
+    padding: 6px 8px;
+    text-align: left;
+}
+
+.ledger-table th {
+    background-color: #f2efe9;
+    color: var(--color-ink);
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.ledger-table tr:nth-child(even) {
+    background-color: #fdfcfb;
+}
+
+.code-pill {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 10px;
+    background-color: #ede9e1;
+    color: var(--color-ink);
+    padding: 1px 5px;
+    border-radius: 2px;
+    border: 1px solid #dcd5ca;
+}
+
+/* ==========================================================================
+   9. HALAMAN KATALOG DESTINASI & FORMULIR KONTAK
+   ========================================================================== */
+.filter-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.filter-btn {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 5px 10px;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--color-ink);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--color-ink);
+    color: #ffffff;
+    border-color: var(--color-ink);
+}
+
+.form-card,
+.info-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 14px;
+}
+
+.form-row {
     margin-bottom: 10px;
 }
 
@@ -534,126 +690,74 @@ body {
     display: block;
     font-size: 10.5px;
     font-weight: 600;
-    color: #334155;
+    color: var(--color-ink);
     margin-bottom: 3px;
 }
 
-.form-input {
+.form-control {
     width: 100%;
-    padding: 7px 10px;
-    border: 1px solid #cbd5e1;
-    border-radius: 4px;
+    padding: 6px 9px;
+    border: 1px solid var(--color-border-dark);
+    border-radius: 2px;
     font-size: 11px;
     font-family: inherit;
-    color: #1e293b;
-    background-color: #f8fafc;
-    transition: border-color 0.2s, background-color 0.2s;
+    color: var(--color-ink);
+    background-color: #fcfbfa;
 }
 
-.form-input:focus {
+.form-control:focus {
     outline: none;
-    border-color: #0077b6;
+    border-color: var(--color-accent-terracotta);
     background-color: #ffffff;
 }
 
-.btn-submit {
-    display: block;
-    width: 100%;
-    background: linear-gradient(135deg, #0d3b66 0%, #0077b6 100%);
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 11px;
-    padding: 9px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: opacity 0.2s;
-}
-
-.btn-submit:hover {
-    opacity: 0.92;
-}
-
-.info-line {
+.form-status-alert {
+    display: none;
+    padding: 8px 10px;
+    background-color: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    color: #1b5e20;
+    border-radius: 2px;
     font-size: 10.5px;
-    color: #475569;
-    margin-bottom: 6px;
+    margin-top: 10px;
+}
+
+.contact-meta-row {
+    font-size: 10.5px;
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
     line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.contact-meta-row svg {
+    width: 13px;
+    height: 13px;
+    stroke: var(--color-accent-terracotta);
+    fill: none;
+    stroke-width: 1.8;
+    flex-shrink: 0;
+    margin-top: 2px;
 }
 
 /* ==========================================================================
-   9. TABEL SPESIFIKASI & VERIFIKASI VARIASI NIM
-   ========================================================================== */
-.nim-spec-box {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    padding: 14px;
-    margin-top: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
-}
-
-.spec-title {
-    font-size: 12.5px;
-    font-weight: 700;
-    color: #0d3b66;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #0077b6;
-    padding-bottom: 6px;
-}
-
-.spec-table-wrap {
-    overflow-x: auto;
-}
-
-.spec-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 11px;
-}
-
-.spec-table th,
-.spec-table td {
-    border: 1px solid #e2e8f0;
-    padding: 7px 10px;
-    text-align: left;
-}
-
-.spec-table th {
-    background-color: #f1f5f9;
-    color: #1e293b;
-    font-weight: 600;
-}
-
-.spec-table tr:nth-child(even) {
-    background-color: #f8fafc;
-}
-
-.tag-badge {
-    background-color: #e0f2fe;
-    color: #0369a1;
-    font-weight: 600;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 10px;
-}
-
-/* ==========================================================================
-   9. FOOTER (BAGIAN BAWAH LAYOUT)
+   10. FOOTER (BAGIAN BAWAH LAYOUT)
    Clearfix dan Reset Float
    ========================================================================== */
 #footer,
 .footer {
     clear: both; /* Memastikan Footer Berada Tepat di Bawah Kolom Float */
-    background: #0d3b66;
+    background-color: var(--color-ink);
     color: #ffffff;
     padding: 20px 20px 14px 20px;
-    border-top: 4px solid #f4a261;
+    border-top: 3px solid var(--color-accent-terracotta);
 }
 
 .footer-columns {
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .footer-col {
@@ -662,51 +766,53 @@ body {
 }
 
 .footer-about {
-    width: 45%;
+    width: 44%;
     padding-right: 20px;
 }
 
 .footer-links {
-    width: 25%;
+    width: 24%;
     padding-right: 14px;
 }
 
 .footer-academic {
-    width: 30%;
+    width: 32%;
 }
 
 .footer-heading {
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 700;
-    color: #f4a261;
+    color: #ffffff;
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 4px;
 }
 
 .footer-text {
     font-size: 10.5px;
-    color: #cbd5e1;
+    color: #a4b3c1;
     margin-bottom: 4px;
     line-height: 1.4;
 }
 
-.footer-menu {
+.footer-nav {
     list-style: none;
 }
 
-.footer-menu li {
+.footer-nav li {
     margin-bottom: 4px;
 }
 
-.footer-menu a {
-    color: #94a3b8;
+.footer-nav a {
+    color: #a4b3c1;
     text-decoration: none;
     font-size: 10.5px;
-    transition: color 0.2s;
+    transition: color 0.15s;
 }
 
-.footer-menu a:hover {
+.footer-nav a:hover {
     color: #ffffff;
     text-decoration: underline;
 }
@@ -717,5 +823,5 @@ body {
     padding-top: 10px;
     text-align: center;
     font-size: 10px;
-    color: #94a3b8;
+    color: #7b8b9a;
 }
