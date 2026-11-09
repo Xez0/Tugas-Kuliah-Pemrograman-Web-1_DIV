@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Praktikum Pemrograman Web 1 - Hadi Sulaiman (241011402572)</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 15mm 20mm 15mm 20mm;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+        }
+
+        .cover-page {
+            text-align: center;
+            page-break-after: always;
+            padding-top: 30px;
+        }
+
+        .cover-title {
+            font-size: 15pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .cover-subtitle {
+            font-size: 13pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            color: #1e293b;
+        }
+
+        .unpam-logo {
+            width: 140px;
+            height: auto;
+            margin: 25px auto;
+            display: block;
+        }
+
+        .cover-meta {
+            margin: 40px auto;
+            font-size: 12pt;
+            line-height: 1.8;
+            font-weight: bold;
+        }
+
+        .cover-footer {
+            margin-top: 60px;
+            font-size: 12pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.4;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        h2.bab-title {
+            text-align: center;
+            font-size: 13pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+        }
+
+        h3.sub-title {
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 6px;
+        }
+
+        p {
+            text-align: justify;
+            text-indent: 30px;
+            margin-bottom: 8px;
+        }
+
+        p.no-indent {
+            text-indent: 0;
+        }
+
+        table.report-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 10pt;
+        }
+
+        table.report-table th,
+        table.report-table td {
+            border: 1px solid #000000;
+            padding: 6px 10px;
+            text-align: left;
+        }
+
+        table.report-table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .code-box {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 9pt;
+            line-height: 1.3;
+            margin: 12px 0;
+            white-space: pre-wrap;
+            border-radius: 4px;
+        }
+
+        .screenshot-box {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .screenshot-box img {
+            max-width: 90%;
+            height: auto;
+            border: 1px solid #94a3b8;
+            border-radius: 4px;
+        }
+
+        .img-caption {
+            font-size: 9.5pt;
+            font-style: italic;
+            margin-top: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HALAMAN COVER -->
+    <div class="cover-page">
+        <div class="cover-title">LAPORAN PRAKTIKUM PEMROGRAMAN WEB 1</div>
+        <div class="cover-subtitle">MERANCANG LAYOUT WEBSITE MENGGUNAKAN TAG &lt;DIV&gt; DAN CSS BERDASARKAN VARIASI NIM</div>
+
+        <img src="logo_unpam.png" alt="Logo Universitas Pamulang" class="unpam-logo">
+
+        <div class="cover-meta">
+            <p class="no-indent">Disusun Oleh :</p>
+            <p class="no-indent"><strong>HADI SULAIMAN</strong></p>
+            <p class="no-indent">NIM : <strong>241011402572</strong></p>
+            <p class="no-indent">Kelas : <strong>05TPLM003</strong></p>
+        </div>
+
+        <div class="cover-footer">
+            PROGRAM STUDI TEKNIK INFORMATIKA S-1<br>
+            FAKULTAS ILMU KOMPUTER<br>
+            UNIVERSITAS PAMULANG<br>
+            TANGERANG SELATAN<br>
+            2026
+        </div>
+    </div>
+
+    <!-- BAB I: LANDASAN TEORI -->
+    <div class="page-break">
+        <h2 class="bab-title">BAB I<br>LANDASAN TEORI</h2>
+
+        <h3 class="sub-title">1.1 Penggunaan Tag &lt;div&gt; dalam Tata Letak Dokumen HTML</h3>
+        <p>
+            Tag <code>&lt;div&gt;</code> (singkatan dari <em>division</em>) adalah elemen tingkat blok (block-level element) serbaguna yang digunakan sebagai wadah (container) untuk mengelompokkan elemen-elemen HTML lainnya ke dalam bagian-bagian logis pada sebuah dokumen web. Elemen <code>&lt;div&gt;</code> tidak memiliki arti semantik intrinsik secara khusus, namun sangat krusial dalam arsitektur tata letak karena berfungsi sebagai fondasi utama di mana penataan gaya Cascading Style Sheets (CSS) diaplikasikan.
+        </p>
+        <p>
+            Dalam perancangan website terstruktur, halaman web umumnya dibagi menjadi empat zona fungsional utama, yaitu bagian atas (Header), bagian samping (Sidebar), area konten utama (Content), serta bagian penutup halaman (Footer). Seluruh bagian tersebut dibungkus di dalam sebuah kontainer pembungkus utama yang sering dinamakan <em>Wrapper</em>.
+        </p>
+
+        <h3 class="sub-title">1.2 Model Kotak (CSS Box Model) dan Sistem Pengapungan (Float Layout)</h3>
+        <p>
+            Setiap elemen pada peramban web direpresentasikan sebagai sebuah kotak persegi panjang yang mengikuti prinsip <strong>CSS Box Model</strong>, terdiri dari empat lapisan berurutan: <em>Content</em>, <em>Padding</em>, <em>Border</em>, dan <em>Margin</em>. Pengaturan properti <code>box-sizing: border-box;</code> sangat dianjurkan dalam desain modern agar nilai padding dan border tidak menambah ukuran total lebar elemen, sehingga mencegah kolom meluap (overflow) atau bergeser ke bawah.
+        </p>
+        <p>
+            Untuk meletakkan elemen <code>&lt;div&gt;</code> secara berdampingan (multi-column), digunakan teknik pengapungan properti <code>float: left;</code>. Agar elemen berikutnya (seperti Footer) tidak terpengaruh oleh aliran elemen yang mengapung, diperlukan pembersihan aliran menggunakan properti <code>clear: both;</code> atau memanfaatkan teknik <em>clearfix</em> modern (pseudo-element <code>::after</code> dengan <code>content: ""; display: table; clear: both;</code>).
+        </p>
+    </div>
+
+    <!-- BAB II: PARAMETER & PERHITUNGAN VARIASI NIM -->
+    <div class="page-break">
+        <h2 class="bab-title">BAB II<br>PERHITUNGAN DAN PARAMETER TUGAS BERDASARKAN NIM</h2>
+
+        <h3 class="sub-title">2.1 Identifikasi Digit NIM Mahasiswa</h3>
+        <p>
+            Penugasan ini memiliki ketentuan penentuan tema, tata letak, dan ukuran CSS yang bersifat dinamis dan unik untuk masing-masing mahasiswa berdasarkan Nomor Induk Mahasiswa (NIM).
+        </p>
+        <p class="no-indent">
+            <strong>NIM Mahasiswa:</strong> 2 4 1 0 1 1 4 0 2 5 7 2<br>
+            <strong>Digit Terakhir:</strong> 2<br>
+            <strong>Lima Digit Terakhir (dari kiri ke kanan):</strong> 0, 2, 5, 7, 2
+        </p>
+
+        <h3 class="sub-title">2.2 Matriks Penentuan Tema dan Layout Wajib</h3>
+        <p>
+            Berdasarkan tabel variasi penugasan, mahasiswa dengan digit terakhir NIM bernilai <strong>2</strong> mendapatkan tema dan susunan tata letak sebagai berikut:
+        </p>
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>Digit Terakhir NIM</th>
+                    <th>Tema Website</th>
+                    <th>Layout Wajib</th>
+                    <th>Implementasi Proyek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center; font-weight: bold;">2</td>
+                    <td><strong>Travel Wisata</strong></td>
+                    <td><strong>Header, sidebar kiri, content dua bagian, footer</strong></td>
+                    <td>Platform Reservasi & Eksplorasi Wisata <em>NusantaraVenture</em></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="sub-title">2.3 Perhitungan Formula CSS Berdasarkan 5 Digit Terakhir NIM</h3>
+        <p>
+            Aturan khusus penugasan menyebutkan: <em>"Jika terdapat digit 0, ganti menjadi 7 dalam perhitungan berikut."</em> Karena lima digit terakhir NIM adalah <code>0, 2, 5, 7, 2</code>, maka digit ke-1 bernilai 0 diubah menjadi <strong>7</strong>.
+        </p>
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>Posisi Digit</th>
+                    <th>Digit Terhitung</th>
+                    <th>Ketentuan / Rumus CSS</th>
+                    <th>Proses Perhitungan Matematis</th>
+                    <th>Nilai CSS Implementasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">Digit ke-1</td>
+                    <td style="text-align: center;"><strong>7</strong> (asli: 0)</td>
+                    <td>Lebar wrapper = 700 + (digit &times; 20) px</td>
+                    <td>700 + (7 &times; 20) = 700 + 140</td>
+                    <td><strong>width: 840px;</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Digit ke-2</td>
+                    <td style="text-align: center;"><strong>2</strong></td>
+                    <td>Tinggi header = 80 + (digit &times; 10) px</td>
+                    <td>80 + (2 &times; 10) = 80 + 20</td>
+                    <td><strong>height: 100px;</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Digit ke-3</td>
+                    <td style="text-align: center;"><strong>5</strong></td>
+                    <td>Lebar sidebar utama = 15 + (digit &times; 2)% dari area utama</td>
+                    <td>15 + (5 &times; 2)% = 15 + 10% = 25%</td>
+                    <td><strong>width: 25% (200px / 210px);</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Digit ke-4</td>
+                    <td style="text-align: center;"><strong>7</strong></td>
+                    <td>Jarak margin antarkolom = digit &times; 2 px</td>
+                    <td>7 &times; 2 px</td>
+                    <td><strong>margin-right: 14px;</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">Digit ke-5</td>
+                    <td style="text-align: center;"><strong>2</strong></td>
+                    <td>Tinggi minimum content = 200 + (digit &times; 20) px</td>
+                    <td>200 + (2 &times; 20) = 200 + 40</td>
+                    <td><strong>min-height: 240px;</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- BAB III: IMPLEMENTASI & HASIL PENGUJIAN -->
+    <div class="page-break">
+        <h2 class="bab-title">BAB III<br>HASIL DAN PENGUJIAN TAMPILAN</h2>
+
+        <h3 class="sub-title">3.1 Tampilan Halaman Beranda (index.html)</h3>
+        <p>
+            Halaman beranda mengimplementasikan struktur tata letak DIV secara menyeluruh. Header memiliki tinggi tepat 100px dengan identitas mahasiswa. Sidebar kiri menampilkan menu navigasi, identitas NIM, dan banner promosi, dipisahkan oleh margin antarkolom 14px menuju area konten. Area konten dibagi menjadi dua kolom simetris yang menyajikan destinasi favorit dan paket tur eksklusif.
+        </p>
+        <div class="screenshot-box">
+            <img src="../screenshot_index.png" alt="Screenshot Halaman Beranda">
+            <div class="img-caption">Gambar 3.1 Tampilan Antarmuka Halaman Beranda (index.html)</div>
+        </div>
+
+        <h3 class="sub-title">3.2 Hasil Pengujian Otomatis Kepatuhan Tata Letak</h3>
+        <div class="code-box">
+==================================================================
+ MEMULAI PENGUJIAN OTOMATIS: LAYOUT DIV & CSS BERDASARKAN NIM
+ Mahasiswa: Hadi Sulaiman | NIM: 241011402572
+==================================================================
+
+[1] PENGUJIAN LEBAR WRAPPER:
+    - Nilai Eksak Target: 840px (700 + 7x20)
+    - Hasil Terukur     : 840px -> STATUS: LULUS (PASS)
+
+[2] PENGUJIAN TINGGI HEADER:
+    - Nilai Eksak Target: 100px (80 + 2x10)
+    - Hasil Terukur     : 100px -> STATUS: LULUS (PASS)
+
+[3] PENGUJIAN SIDEBAR KIRI:
+    - Lebar Terukur: 200px (~25% area utama) -> STATUS: LULUS (PASS)
+
+[4] PENGUJIAN JARAK MARGIN ANTARKOLOM (Sidebar & Content):
+    - Nilai Eksak Target: 14px (7 x 2)
+    - Hasil Terukur     : 14px -> STATUS: LULUS (PASS)
+
+[5] PENGUJIAN JARAK MARGIN CONTENT DUA BAGIAN:
+    - Nilai Eksak Target: 14px (7 x 2)
+    - Hasil Terukur     : 14px -> STATUS: LULUS (PASS)
+
+[6] PENGUJIAN TINGGI MINIMUM CONTENT:
+    - Nilai Minimum Target: 240px (200 + 2x20)
+    - Hasil Terukur       : 1308.59px -> STATUS: LULUS (PASS)
+
+[7] PENGUJIAN ELEMEN STRUKTUR TAG &lt;DIV&gt;:
+    - Total Tag &lt;div&gt; Ditemukan: 48 -> STATUS: LULUS (PASS)
+==================================================================
+ SELURUH PENGUJIAN BERHASIL 100% (ALL TESTS PASSED)!
+==================================================================
+        </div>
+    </div>
+
+    <!-- BAB IV: KESIMPULAN -->
+    <div class="page-break">
+        <h2 class="bab-title">BAB IV<br>KESIMPULAN</h2>
+        <p>
+            Berdasarkan praktikum dan perancangan website yang telah dilakukan, dapat diambil beberapa poin kesimpulan sebagai berikut:
+        </p>
+        <ol style="margin-left: 20px; text-align: justify;">
+            <li style="margin-bottom: 6px;">
+                Penggunaan tag <code>&lt;div&gt;</code> bersama dengan penataan gaya CSS memungkinkan pembentukan tata letak halaman web yang rapi, modular, dan terstruktur dengan baik sesuai kebutuhan arsitektur antarmuka pengguna modern.
+            </li>
+            <li style="margin-bottom: 6px;">
+                Teknik <code>float: left;</code> yang dikombinasikan dengan <code>clear: both;</code> dan <code>clearfix</code> berhasil menciptakan tata letak dua kolom (sidebar dan content) serta pembagian sub-kolom (content dua bagian) yang presisi dan stabil di peramban web modern.
+            </li>
+            <li style="margin-bottom: 6px;">
+                Semua parameter penugasan berdasarkan variasi NIM <strong>241011402572</strong> (tema Travel Wisata, lebar wrapper 840px, tinggi header 100px, lebar sidebar 25%, margin antarkolom 14px, dan tinggi minimum content 240px) telah berhasil dihitung secara matematis dan diimplementasikan secara akurat pada kode CSS.
+            </li>
+        </ol>
+    </div>
+
+</body>
+</html>
