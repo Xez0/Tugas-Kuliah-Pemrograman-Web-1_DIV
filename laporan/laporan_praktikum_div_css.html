@@ -296,7 +296,7 @@
 
         <h3 class="sub-title">3.1 Tampilan Antarmuka Halaman Beranda (index.html)</h3>
         <p>
-            Halaman beranda mengimplementasikan struktur tata letak DIV secara menyeluruh. Header memiliki tinggi tepat 100px dengan identitas mahasiswa dan logo mawar kompas. Sidebar kiri menampilkan menu navigasi, identitas NIM, catatan musim pelayaran, dan kontak kantor operasional, dipisahkan oleh margin antarkolom 14px menuju area konten. Area konten dibagi menjadi dua kolom simetris yang menyajikan zona bahari karang dan zona selat vulkanik.
+            Halaman beranda mengimplementasikan struktur tata letak DIV secara menyeluruh. Header memiliki tinggi tepat 100px dengan identitas mahasiswa dan logo resmi perahu Pinisi Nusantara. Pojok kanan atas memuat navigasi cepat menuju seluruh halaman (Beranda, Destinasi, Paket Layanan, dan Kontak) serta lencana identitas pengembang. Sidebar kiri menampilkan menu navigasi, identitas NIM, catatan musim pelayaran, dan kontak kantor operasional, dipisahkan oleh margin antarkolom 14px menuju area konten. Area konten dibagi menjadi dua kolom simetris yang menyajikan zona bahari karang dan zona selat vulkanik.
         </p>
         <div class="screenshot-box">
             <img src="../screenshot_index.png" alt="Screenshot Halaman Beranda">
@@ -321,7 +321,8 @@
 
 [UJI 2] Verifikasi Alur Navigasi Antar Halaman...
   OK: Navigasi Index -> Destinasi Sukses
-  OK: Navigasi Destinasi -> Kontak Sukses
+  OK: Navigasi Destinasi -> Paket Layanan Sukses
+  OK: Navigasi Paket Layanan -> Kontak Sukses
   OK: Navigasi Kontak -> Index Sukses
 
 [UJI 3] Verifikasi Fungsi Filter Interaktif Destinasi...
@@ -332,9 +333,11 @@
 [UJI 4] Verifikasi Interaksi Formulir Reservasi...
   OK: Pengiriman Formulir Reservasi memunculkan status sukses terverifikasi
 
-[UJI 5] Audit Standar Kualitas Anti-Slop...
+[UJI 5] Audit Standar Kualitas Anti-Slop & Desain Logo...
+  OK: Logo Kapal Pinisi Tradisional terverifikasi tampil jelas
   OK: Berkas index.html bebas em dash dan bebas kata klise AI
   OK: Berkas destinasi.html bebas em dash dan bebas kata klise AI
+  OK: Berkas paket.html bebas em dash dan bebas kata klise AI
   OK: Berkas kontak.html bebas em dash dan bebas kata klise AI
 
 ======================================================================
