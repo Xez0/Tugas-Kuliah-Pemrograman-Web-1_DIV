@@ -17,6 +17,7 @@ def run_e2e():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     index_url = "file:///" + os.path.join(base_dir, "index.html").replace("\\", "/")
     destinasi_url = "file:///" + os.path.join(base_dir, "destinasi.html").replace("\\", "/")
+    paket_url = "file:///" + os.path.join(base_dir, "paket.html").replace("\\", "/")
     kontak_url = "file:///" + os.path.join(base_dir, "kontak.html").replace("\\", "/")
     
     with sync_playwright() as p:
@@ -68,7 +69,7 @@ def run_e2e():
         print(f"  OK: Tinggi Minimum Content = {c_box['height']}px (Target: >= 240px)")
 
         # -------------------------------------------------------------
-        # UJI 2: NAVIGASI KLIK ANTAR HALAMAN (E2E FLOW)
+        # UJI 2: NAVIGASI LENGKAP SEMUA HALAMAN (E2E FLOW)
         # -------------------------------------------------------------
         print("\n[UJI 2] Verifikasi Alur Navigasi Antar Halaman...")
         
@@ -78,11 +79,17 @@ def run_e2e():
         assert "destinasi.html" in page.url
         print("  OK: Navigasi Index -> Destinasi Sukses")
         
-        # Klik link Kontak & Reservasi dari Destinasi
+        # Klik link Paket Layanan dari Destinasi
+        page.locator("a[href='paket.html']").first.click()
+        page.wait_for_load_state("load")
+        assert "paket.html" in page.url
+        print("  OK: Navigasi Destinasi -> Paket Layanan Sukses")
+        
+        # Klik link Kontak & Reservasi dari Paket
         page.locator("a[href='kontak.html']").first.click()
         page.wait_for_load_state("load")
         assert "kontak.html" in page.url
-        print("  OK: Navigasi Destinasi -> Kontak Sukses")
+        print("  OK: Navigasi Paket Layanan -> Kontak Sukses")
         
         # Klik link Beranda Ekspedisi dari Kontak
         page.locator("a[href='index.html']").first.click()
@@ -137,11 +144,17 @@ def run_e2e():
         print("  OK: Pengiriman Formulir Reservasi memunculkan status sukses terverifikasi")
 
         # -------------------------------------------------------------
-        # UJI 5: AUDIT STANDAR ANTI-SLOP
+        # UJI 5: VERIFIKASI LOGO PINISI DAN AUDIT STANDAR ANTI-SLOP
         # -------------------------------------------------------------
-        print("\n[UJI 5] Audit Standar Kualitas Anti-Slop...")
+        print("\n[UJI 5] Audit Standar Kualitas Anti-Slop & Desain Logo...")
         
-        for fname in ["index.html", "destinasi.html", "kontak.html"]:
+        # Verifikasi Logo Pinisi ada di header
+        page.goto(index_url)
+        logo = page.locator(".logo-pinisi")
+        assert logo.is_visible(), "Logo Kapal Pinisi harus tampil jelas di header"
+        print("  OK: Logo Kapal Pinisi Tradisional terverifikasi tampil jelas")
+        
+        for fname in ["index.html", "destinasi.html", "paket.html", "kontak.html"]:
             fpath = os.path.join(base_dir, fname)
             with open(fpath, "r", encoding="utf-8") as f:
                 content = f.read()
