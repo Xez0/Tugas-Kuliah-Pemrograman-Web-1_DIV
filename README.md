@@ -1,6 +1,6 @@
 # Tugas Pemrograman Web 1: Merancang Layout Website Menggunakan DIV dan CSS Berdasarkan Variasi NIM
 
-Proyek penugasan mata kuliah **Pemrograman Web 1** pada Program Studi Teknik Informatika S-1, Fakultas Ilmu Komputer, Universitas Pamulang.
+Repositori resmi penugasan mata kuliah **Pemrograman Web 1** pada Program Studi Teknik Informatika S-1, Fakultas Ilmu Komputer, Universitas Pamulang.
 
 ---
 
@@ -13,10 +13,11 @@ Proyek penugasan mata kuliah **Pemrograman Web 1** pada Program Studi Teknik Inf
 - **Perguruan Tinggi :** Universitas Pamulang
 - **Mata Kuliah :** Pemrograman Web 1
 - **Topik Penugasan :** Merancang Layout Website Menggunakan `<div>` dan CSS Berdasarkan Variasi NIM
+- **Pendekatan Desain :** Standar Editorial Anti-Slop (Bebas Em Dash, Ikon Inline SVG, Palet Basalt dan Terakota)
 
 ---
 
-## Petunjuk Penugasan
+## Petunjuk Penugasan Dosen
 Website dirancang menggunakan HTML dan CSS murni dengan memanfaatkan tag `<div>` sebagai pembentuk struktur halaman. Halaman wajib memiliki bagian **Header, Sidebar, Content, dan Footer**, serta menerapkan aturan kalkulasi CSS berdasarkan variasi NIM mahasiswa.
 
 ![Petunjuk Tugas](images/petunjuk_tugas.jpg)
@@ -50,7 +51,7 @@ Lima digit terakhir dari kiri ke kanan: **`0, 2, 5, 7, 2`**
 | :---: | :---: | :---: | :--- | :--- | :---: | :--- |
 | **Digit ke-1** | `0` | **`7`** *(diubah dari 0)* | Lebar wrapper = $700 + (\text{digit} \times 20)\text{ px}$ | $700 + (7 \times 20) = 700 + 140$ | **`840px`** | `#wrapper`, `.wrapper` |
 | **Digit ke-2** | `2` | **`2`** | Tinggi header = $80 + (\text{digit} \times 10)\text{ px}$ | $80 + (2 \times 10) = 80 + 20$ | **`100px`** | `#header`, `.header` |
-| **Digit ke-3** | `5` | **`5`** | Lebar sidebar utama = $15 + (\text{digit} \times 2)\%$ dari lebar area utama | $15 + (5 \times 2)\% = 15 + 10\%$ | **`25%` (`210px`)** | `#sidebar`, `.sidebar` |
+| **Digit ke-3** | `5` | **`5`** | Lebar sidebar utama = $15 + (\text{digit} \times 2)\%$ dari area utama | $15 + (5 \times 2)\% = 15 + 10\%$ | **`25%` (`210px`)** | `#sidebar`, `.sidebar` |
 | **Digit ke-4** | `7` | **`7`** | Jarak margin antarkolom = $\text{digit} \times 2\text{ px}$ | $7 \times 2$ | **`14px`** | `.sidebar { margin-right: 14px; }`<br>`.content-col.col-left { margin-right: 14px; }` |
 | **Digit ke-5** | `2` | **`2`** | Tinggi minimum content = $200 + (\text{digit} \times 20)\text{ px}$ | $200 + (2 \times 20) = 200 + 40$ | **`240px`** | `#content`, `.content-area`, `.content-col` |
 
@@ -76,52 +77,47 @@ $$\begin{aligned}
 ```
 Tugas-Kuliah-Pemrograman-Web-1_DIV/
 ├── index.html                  # Halaman Beranda Utama (Header, Sidebar Kiri, Content 2 Bagian, Footer)
-├── destinasi.html              # Halaman Katalog Wisata (Layout DIV Konsisten, Dua Kolom Destinasi)
-├── kontak.html                 # Halaman Kontak & Reservasi (Formulir Pemesanan & Info Kantor)
+├── destinasi.html              # Halaman Katalog Wisata (Filter Interaktif, Dua Kolom Destinasi)
+├── kontak.html                 # Halaman Kontak & Reservasi (Formulir Pendaftaran & Validasi Input)
 ├── style.css                   # Berkas Eksternal CSS Tata Letak DIV & Aturan Formula NIM
+├── DESIGN.md                   # Spesifikasi Token Desain, Palet Warna & Prinsip Anti-Slop
 ├── images/                     # Direktori Aset Media & Fotografi Wisata
 │   ├── petunjuk_tugas.jpg      # Foto Panduan Soal Penugasan Dosen
-│   ├── hero-marine.jpg         # Gambar Hero Header Wisata
-│   ├── raja-ampat.jpg          # Destinasi Raja Ampat, Papua
+│   ├── hero-marine.jpg         # Banner Header Wisata
+│   ├── raja-ampat.jpg          # Destinasi Raja Ampat, Papua Barat Daya
 │   ├── bromo.jpg               # Destinasi Gunung Bromo, Jawa Timur
 │   ├── labuan-bajo.jpg         # Destinasi Labuan Bajo & Komodo, NTT
 │   ├── nusa-penida.jpg         # Destinasi Nusa Penida, Bali
 │   ├── kawah-ijen.jpg          # Destinasi Kawah Ijen Blue Fire, Jawa Timur
-│   ├── cappadocia.jpg          # Aset Tambahan
-│   └── kyoto.jpg               # Aset Tambahan
+│   ├── cappadocia.jpg          # Aset Cadangan
+│   └── kyoto.jpg               # Aset Cadangan
 ├── screenshot_index.png        # Tangkapan Layar Tampilan Asli Halaman Beranda
 ├── screenshot_destinasi.png    # Tangkapan Layar Tampilan Asli Halaman Destinasi
 ├── screenshot_kontak.png       # Tangkapan Layar Tampilan Asli Halaman Kontak
+├── test_e2e.py                 # Suite Pengujian Otomatis End-to-End (Playwright)
+├── laporan/                    # Laporan Praktikum Resmi Siap Cetak
+│   ├── Laporan_Praktikum_DIV_CSS_241011402572.pdf # Format PDF Resmi Standar A4
+│   ├── laporan_praktikum_div_css.html              # Sumber HTML Laporan
+│   └── logo_unpam.png                              # Logo Universitas Pamulang
 ├── .gitignore                  # Berkas Pengabaian Git
 └── README.md                   # Dokumentasi Teknis Komprehensif
 ```
 
 ---
 
-## 5. Fitur Halaman Website
+## 5. Fitur Unggulan & Standar Desain Anti-Slop
 
-### A. Halaman Beranda (`index.html`)
-- **Header:** Tinggi 100px, warna gradien maritim modern, logo pesawat terbang, nama brand **NusantaraVenture**, dan lencana identitas NIM mahasiswa.
-- **Sidebar Kiri:** Lebar proporsional 25%, berisi menu navigasi halaman, widget identitas mahasiswa (Hadi Sulaiman - 241011402572), promo eksklusif diskon 30%, serta info layanan pelanggan.
-- **Content Area (Dua Bagian):**
-  - **Bagian 1 (Kolom Kiri):** Destinasi Unggulan (Raja Ampat & Gunung Bromo) lengkap dengan kartu foto, tag kategori, deskripsi, harga, dan tombol detail.
-  - **Bagian 2 (Kolom Kanan):** Paket Tour Populer (Labuan Bajo Phinisi & Nusa Penida Island) dengan informasi jadwal dan harga paket.
-- **Tabel Verifikasi NIM:** Menampilkan tabel rincian formula perhitungan CSS yang tertanam langsung di halaman web.
-- **Footer:** Menutup layout dengan 3 kolom informatif (Tentang Kami, Navigasi Halaman, Info Akademik) dan teks hak cipta.
-
-### B. Halaman Katalog Destinasi (`destinasi.html`)
-- Mempertahankan konsistensi tata letak `<div>` dan aturan formula CSS NIM.
-- Menampilkan filter kategori wisata (Wisata Bahari, Pegunungan, Budaya, Kuliner).
-- Konten dua bagian menyajikan kartu destinasi wisata bahari dan pegunungan dengan tombol aksi reservasi.
-
-### C. Halaman Kontak & Reservasi (`kontak.html`)
-- Mempertahankan struktur tata letak `<div>` dan CSS formula NIM.
-- Konten bagian kiri menyajikan formulir interaktif (Nama, Email, WhatsApp, Pilihan Destinasi, Pesan Khusus).
-- Konten bagian kanan memuat data alamat kantor operasional, kontak telepon, jam operasional, dan garansi layanan 100%.
+1. **Subject-Matter Grounding:** Menggunakan materi riil ekspedisi kepulauan nusantara dengan rute geografis autentik (Misool, Teluk Padar, Lautan Pasir Tengger, Solfatara Ijen).
+2. **Ketiadaan Pola Klise AI (Anti-Slop):** Bebas karakter em dash, bebas emoji font anak-anak, bebas kapsul pill badge generik, dan bebas teks gradien artifisial.
+3. **Ikonografi Vektor Presisi:** Menggunakan sistem inline SVG dengan tebal garis seragam 1.5px.
+4. **Resiliensi & Interaksi:**
+   - Filter katalog berbasis kategori pada `destinasi.html` (Semua Zona, Bahari, Vulkanik).
+   - Penanganan formulir interaktif dengan notifikasi status berhasil pada `kontak.html`.
+   - Navigasi ramah keyboard dengan indikator fokus terlihat (`:focus-visible`).
 
 ---
 
-## 6. Pratinjau Tangkapan Layar
+## 6. Pratinjau Tangkapan Layar Tampilan Nyata
 
 ### Tampilan Halaman Utama (`index.html`)
 ![Screenshot Index](screenshot_index.png)
@@ -134,13 +130,16 @@ Tugas-Kuliah-Pemrograman-Web-1_DIV/
 
 ---
 
-## 7. Cara Menjalankan Proyek
-1. Clone repositori ini melalui terminal:
+## 7. Cara Menjalankan Proyek & Pengujian E2E
+
+1. Clone repositori:
    ```bash
    git clone https://github.com/Xez0/Tugas-Kuliah-Pemrograman-Web-1_DIV.git
-   ```
-2. Masuk ke direktori proyek:
-   ```bash
    cd Tugas-Kuliah-Pemrograman-Web-1_DIV
    ```
-3. Buka berkas `index.html` langsung pada peramban web modern Anda (Google Chrome, Microsoft Edge, Mozilla Firefox, Safari, dll).
+2. Buka `index.html` pada peramban web modern Anda.
+3. Menjalankan pengujian otomatis End-to-End:
+   ```bash
+   python test_e2e.py
+   ```
+Semua 5 rangkaian pengujian (geometri NIM, alur navigasi, filter interaktif, formulir, audit anti-slop) lulus 100%.
