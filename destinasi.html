@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destinasi Populer - NusantaraVenture | Travel Wisata</title>
+    <title>Katalog Destinasi Ekspedisi - NusantaraVenture</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,16 +18,24 @@
         <div id="header" class="header">
             <div class="header-content">
                 <div class="header-brand">
-                    <div class="logo-circle">&#9992;</div>
-                    <div class="brand-info">
+                    <div class="brand-symbol" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9"/>
+                            <polygon points="12 4 14.5 9.5 20 12 14.5 14.5 12 20 9.5 14.5 4 12 9.5 9.5 12 4" fill="currentColor" opacity="0.3"/>
+                            <line x1="12" y1="3" x2="12" y2="21"/>
+                            <line x1="3" y1="12" x2="21" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
                         <h1 class="site-title">NusantaraVenture</h1>
-                        <p class="site-tagline">Katalog Destinasi Wisata Terbaik Nusantara</p>
+                        <p class="site-tagline">Katalog Destinasi Penjelajahan Alam Indonesia</p>
                     </div>
                 </div>
-                <div class="nim-identity-badge">
-                    <span class="badge-label">Katalog Destinasi</span>
-                    <span class="badge-nim">NIM: 241011402572</span>
-                    <span class="badge-theme">Tema: Travel Wisata</span>
+
+                <div class="header-academic-tag">
+                    <span class="academic-label">Katalog Destinasi</span>
+                    <div class="academic-meta">Hadi Sulaiman &bull; 241011402572</div>
+                    <div class="academic-sub">Kelas 05TPLM003 &bull; Variasi Travel Wisata</div>
                 </div>
             </div>
         </div>
@@ -38,44 +46,71 @@
             <!-- SIDEBAR KIRI (Formula NIM: Lebar = 25% / 210px, Margin Antarkolom = 14px) -->
             <div id="sidebar" class="sidebar">
                 
-                <!-- Box Navigasi -->
-                <div class="sidebar-widget">
-                    <h3 class="widget-title">Menu Utama</h3>
-                    <ul class="nav-links">
-                        <li><a href="index.html">&#127968; Beranda</a></li>
-                        <li><a href="destinasi.html" class="active">&#127757; Destinasi Populer</a></li>
-                        <li><a href="index.html#content-columns">&#127957; Paket Wisata</a></li>
-                        <li><a href="kontak.html">&#128222; Kontak & Reservasi</a></li>
+                <!-- Panel Navigasi -->
+                <div class="sidebar-panel">
+                    <h3 class="panel-title">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        Navigasi Rute
+                    </h3>
+                    <ul class="editorial-nav">
+                        <li>
+                            <a href="index.html">
+                                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                                Beranda Ekspedisi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="destinasi.html" class="active">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                Katalog Destinasi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#content-columns">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                                Paket Pelayaran
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kontak.html">
+                                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                Reservasi & Kontak
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- Box Filter Kategori -->
-                <div class="sidebar-widget">
-                    <h3 class="widget-title">Kategori Wisata</h3>
-                    <ul class="nav-links">
-                        <li><a href="#bahari" class="active">&#127754; Wisata Bahari</a></li>
-                        <li><a href="#pegunungan">&#127956; Gunung & Alam</a></li>
-                        <li><a href="#budaya">&#127989; Warisan Budaya</a></li>
-                        <li><a href="#kuliner">&#127860; Kuliner Nusantara</a></li>
-                    </ul>
+                <!-- Panel Identitas Mahasiswa -->
+                <div class="sidebar-panel">
+                    <h3 class="panel-title">
+                        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        Identitas Pengembang
+                    </h3>
+                    <table class="student-data-table">
+                        <tr>
+                            <td class="label">Nama</td>
+                            <td class="val">Hadi Sulaiman</td>
+                        </tr>
+                        <tr>
+                            <td class="label">NIM</td>
+                            <td class="val">241011402572</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Kelas</td>
+                            <td class="val">05TPLM003</td>
+                        </tr>
+                    </table>
                 </div>
 
-                <!-- Box Mahasiswa -->
-                <div class="sidebar-widget student-widget">
-                    <h3 class="widget-title">Pengembang Web</h3>
-                    <div class="student-info-card">
-                        <p class="student-name"><strong>Hadi Sulaiman</strong></p>
-                        <p class="student-detail"><strong>NIM:</strong> 241011402572</p>
-                        <p class="student-detail"><strong>Kelas:</strong> 05TPLM003</p>
-                        <p class="student-detail"><strong>Mata Kuliah:</strong> Web 1</p>
-                    </div>
-                </div>
-
-                <!-- Box Banner Booking -->
-                <div class="sidebar-widget promo-widget">
-                    <h3 class="widget-title">Butuh Panduan?</h3>
-                    <p class="promo-desc">Konsultasikan rute perjalanan wisata impian Anda bersama tim spesialis kami!</p>
-                    <a href="kontak.html" class="btn-sidebar">Hubungi Kami</a>
+                <!-- Panel Kesiapan Fisik Ekspedisi -->
+                <div class="sidebar-panel">
+                    <h3 class="panel-title">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        Protokol Keamanan
+                    </h3>
+                    <p class="field-note-text">
+                        Setiap peserta ekspedisi wajib mematuhi panduan konservasi terumbu karang, menggunakan pelampung standar ISO, dan membuang sampah pada tempat pemilahan kapal.
+                    </p>
                 </div>
 
             </div>
@@ -83,97 +118,129 @@
             <!-- CONTENT AREA (Formula NIM: Min-Height = 240px, Content Dua Bagian) -->
             <div id="content" class="content-area">
                 
-                <!-- Section Header Konten -->
-                <div class="hero-banner" style="padding: 16px 20px;">
-                    <div class="hero-text">
-                        <h2 style="font-size: 17px; margin-bottom: 4px;">Koleksi Destinasi Nusantara</h2>
-                        <p style="font-size: 11px; margin-bottom: 0;">Pilihlah surga tersembunyi favorit Anda dari Sabang hingga Merauke yang siap memberikan pengalaman berkesan seumur hidup.</p>
-                    </div>
+                <!-- Editorial Lead Banner -->
+                <div class="editorial-lead">
+                    <div class="editorial-meta-top">Inventarisasi Wilayah Konservasi</div>
+                    <h2>Pilihan Titik Singgah & Destinasi Bahari Indonesia</h2>
+                    <p>
+                        Pilihlah wilayah penjelajahan alam sesuai kategori lanskap dan kesiapan fisik Anda. Setiap destinasi dilengkapi informasi logistik resmi dan kuota tim per keberangkatan.
+                    </p>
+                </div>
+
+                <!-- Interactive Filter Tabs -->
+                <div class="filter-tabs" role="tablist">
+                    <button class="filter-btn active" onclick="filterDestinasi('all', this)">Semua Zona</button>
+                    <button class="filter-btn" onclick="filterDestinasi('bahari', this)">Bahari & Karang</button>
+                    <button class="filter-btn" onclick="filterDestinasi('gunung', this)">Vulkanik & Kaldera</button>
                 </div>
 
                 <!-- CONTENT DUA BAGIAN (Two-Column Content Area) -->
-                <div class="content-two-columns clearfix">
+                <div id="destinasi-grid" class="content-two-columns clearfix">
                     
-                    <!-- KONTEN BAGIAN 1: DESTINASI WISATA BAHARI -->
+                    <!-- KONTEN BAGIAN 1: DESTINASI KELOMPOK A -->
                     <div id="content-kolom-1" class="content-col col-left">
-                        <div class="col-header">
-                            <span class="col-icon">&#127754;</span>
-                            <h3 class="col-title">Wisata Bahari & Pantai</h3>
-                        </div>
-
-                        <!-- Card 1: Raja Ampat -->
-                        <div class="destination-card">
-                            <div class="card-image-wrap">
-                                <img src="images/raja-ampat.jpg" alt="Raja Ampat" class="card-img">
-                                <span class="card-tag">Papua Barat</span>
+                        
+                        <!-- Destinasi 1: Raja Ampat -->
+                        <div class="expedition-card card-standalone item-bahari">
+                            <div class="expedition-visual">
+                                <img src="images/raja-ampat.jpg" alt="Raja Ampat" class="expedition-img">
+                                <span class="geo-tag">Bahari Timur</span>
                             </div>
-                            <div class="card-content">
-                                <h4 class="card-title">Piaynemo Raja Ampat</h4>
-                                <p class="card-location">&#128205; Raja Ampat, Papua</p>
-                                <p class="card-text">Panorama gugusan bukit karst di atas air laut gradasi toska yang luar biasa indah dari gardu pandang ikonik.</p>
-                                <div class="card-footer-info">
-                                    <span class="price-val">Rp 5.750.000</span>
-                                    <a href="kontak.html" class="btn-card">Booking</a>
+                            <div class="expedition-details">
+                                <h4 class="expedition-name">Piaynemo & Teluk Kabui</h4>
+                                <div class="expedition-route">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
+                                    Kepulauan Gam, Raja Ampat
+                                </div>
+                                <p class="expedition-narrative">
+                                    Gugusan pulau karang mikro dengan gua bawah laut alami dan jalur perlintasan pari manta karang raksasa.
+                                </p>
+                                <div class="expedition-footer">
+                                    <div class="tariff-block">
+                                        <span class="tariff-label">Tarif</span>
+                                        <span class="tariff-amount">Rp 5.750.000</span>
+                                    </div>
+                                    <a href="kontak.html" class="btn-editorial">Reservasi</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card 2: Labuan Bajo -->
-                        <div class="destination-card">
-                            <div class="card-image-wrap">
-                                <img src="images/labuan-bajo.jpg" alt="Pulau Padar Labuan Bajo" class="card-img">
-                                <span class="card-tag">NTT</span>
+                        <!-- Destinasi 2: Bromo -->
+                        <div class="expedition-card card-standalone item-gunung">
+                            <div class="expedition-visual">
+                                <img src="images/bromo.jpg" alt="Gunung Bromo" class="expedition-img">
+                                <span class="geo-tag">Vulkanik</span>
                             </div>
-                            <div class="card-content">
-                                <h4 class="card-title">Pulau Padar & Komodo</h4>
-                                <p class="card-location">&#128205; Manggarai Barat, NTT</p>
-                                <p class="card-text">Pemandangan tiga teluk dengan warna pasir pantai yang berbeda (putih, merah muda, dan hitam vulkanik).</p>
-                                <div class="card-footer-info">
-                                    <span class="price-val">Rp 4.250.000</span>
-                                    <a href="kontak.html" class="btn-card">Booking</a>
+                            <div class="expedition-details">
+                                <h4 class="expedition-name">Kawah Bromo & Bukit Cinta</h4>
+                                <div class="expedition-route">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
+                                    Probolinggo, Jawa Timur
+                                </div>
+                                <p class="expedition-narrative">
+                                    Penjelajahan kawah purba kaldera dengan pemandangan gugusan Gunung Batok dan puncak tertinggi Semeru.
+                                </p>
+                                <div class="expedition-footer">
+                                    <div class="tariff-block">
+                                        <span class="tariff-label">Tarif</span>
+                                        <span class="tariff-amount">Rp 1.450.000</span>
+                                    </div>
+                                    <a href="kontak.html" class="btn-editorial">Reservasi</a>
                                 </div>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- KONTEN BAGIAN 2: WISATA GUNUNG & ALAM -->
+                    <!-- KONTEN BAGIAN 2: DESTINASI KELOMPOK B -->
                     <div id="content-kolom-2" class="content-col col-right">
-                        <div class="col-header">
-                            <span class="col-icon">&#127956;</span>
-                            <h3 class="col-title">Wisata Pegunungan & Tebing</h3>
-                        </div>
-
-                        <!-- Card 3: Bromo -->
-                        <div class="destination-card">
-                            <div class="card-image-wrap">
-                                <img src="images/bromo.jpg" alt="Gunung Bromo" class="card-img">
-                                <span class="card-tag">Jawa Timur</span>
+                        
+                        <!-- Destinasi 3: Labuan Bajo -->
+                        <div class="expedition-card card-standalone item-bahari">
+                            <div class="expedition-visual">
+                                <img src="images/labuan-bajo.jpg" alt="Labuan Bajo" class="expedition-img">
+                                <span class="geo-tag">Bahari Sunda</span>
                             </div>
-                            <div class="card-content">
-                                <h4 class="card-title">Kawah Gunung Bromo</h4>
-                                <p class="card-location">&#128205; Probolinggo, Jatim</p>
-                                <p class="card-text">Sensasi mengendarai Jeep 4x4 melintasi lautan pasir berbisik dan mendaki anak tangga menuju bibir kawah aktif.</p>
-                                <div class="card-footer-info">
-                                    <span class="price-val">Rp 1.450.000</span>
-                                    <a href="kontak.html" class="btn-card">Booking</a>
+                            <div class="expedition-details">
+                                <h4 class="expedition-name">Pulau Rinca & Pantai Merah</h4>
+                                <div class="expedition-route">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
+                                    Manggarai Barat, NTT
+                                </div>
+                                <p class="expedition-narrative">
+                                    Pantai berpasir merah muda dari serpihan foraminifera mikroskopis dan pengamatan perilaku liar kadal purba.
+                                </p>
+                                <div class="expedition-footer">
+                                    <div class="tariff-block">
+                                        <span class="tariff-label">Tarif</span>
+                                        <span class="tariff-amount">Rp 4.250.000</span>
+                                    </div>
+                                    <a href="kontak.html" class="btn-editorial">Reservasi</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card 4: Kawah Ijen -->
-                        <div class="destination-card">
-                            <div class="card-image-wrap">
-                                <img src="images/kawah-ijen.jpg" alt="Kawah Ijen Blue Fire" class="card-img">
-                                <span class="card-tag">Blue Fire</span>
+                        <!-- Destinasi 4: Kawah Ijen -->
+                        <div class="expedition-card card-standalone item-gunung">
+                            <div class="expedition-visual">
+                                <img src="images/kawah-ijen.jpg" alt="Kawah Ijen" class="expedition-img">
+                                <span class="geo-tag">Vulkanik</span>
                             </div>
-                            <div class="card-content">
-                                <h4 class="card-title">Blue Fire Kawah Ijen</h4>
-                                <p class="card-location">&#128205; Banyuwangi, Jatim</p>
-                                <p class="card-text">Fenomena langka api biru alami yang hanya ada dua di dunia, serta pemandangan danau kawah asam tercantik.</p>
-                                <div class="card-footer-info">
-                                    <span class="price-val">Rp 1.200.000</span>
-                                    <a href="kontak.html" class="btn-card">Booking</a>
+                            <div class="expedition-details">
+                                <h4 class="expedition-name">Kawah Ijen & Danau Asam</h4>
+                                <div class="expedition-route">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
+                                    Banyuwangi, Jawa Timur
+                                </div>
+                                <p class="expedition-narrative">
+                                    Fenomena gas belerang menyala biru elektrik di dasar danau kawah terasam di dunia pada suhu ekstrem malam hari.
+                                </p>
+                                <div class="expedition-footer">
+                                    <div class="tariff-block">
+                                        <span class="tariff-label">Tarif</span>
+                                        <span class="tariff-amount">Rp 1.200.000</span>
+                                    </div>
+                                    <a href="kontak.html" class="btn-editorial">Reservasi</a>
                                 </div>
                             </div>
                         </div>
@@ -190,30 +257,52 @@
         <div id="footer" class="footer">
             <div class="footer-columns clearfix">
                 <div class="footer-col footer-about">
-                    <h4 class="footer-heading">&#9992; NusantaraVenture</h4>
-                    <p class="footer-text">Platform terdepan penyedia tur wisata eksplorasi alam dan kepulauan Indonesia secara aman, profesional, dan berkesan.</p>
+                    <h4 class="footer-heading">NusantaraVenture</h4>
+                    <p class="footer-text">
+                        Katalog resmi destinasi ekspedisi kepulauan nusantara dengan standar navigasi maritim terverifikasi.
+                    </p>
                 </div>
                 <div class="footer-col footer-links">
                     <h4 class="footer-heading">Navigasi Halaman</h4>
-                    <ul class="footer-menu">
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="destinasi.html">Destinasi</a></li>
-                        <li><a href="kontak.html">Kontak</a></li>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Beranda Ekspedisi</a></li>
+                        <li><a href="destinasi.html">Katalog Destinasi</a></li>
+                        <li><a href="kontak.html">Kontak & Reservasi</a></li>
                     </ul>
                 </div>
                 <div class="footer-col footer-academic">
-                    <h4 class="footer-heading">Informasi Akademik</h4>
-                    <p class="footer-text">Tugas Pemrograman Web 1 (DIV & CSS)</p>
-                    <p class="footer-text">Nama: Hadi Sulaiman | NIM: 241011402572</p>
+                    <h4 class="footer-heading">Keterangan Akademik</h4>
+                    <p class="footer-text">Praktikum Pemrograman Web 1 (DIV & CSS)</p>
+                    <p class="footer-text">Hadi Sulaiman &bull; NIM 241011402572</p>
                     <p class="footer-text">Universitas Pamulang &copy; 2026</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 NusantaraVenture. Hak Cipta Dilindungi Undang-Undang. Dibuat untuk Penugasan Web 1.</p>
+                &copy; 2026 NusantaraVenture. Seluruh hak cipta dilindungi undang-undang.
             </div>
         </div>
 
     </div>
+
+    <!-- Script Filter Interaktif -->
+    <script>
+        function filterDestinasi(kategori, btn) {
+            const btns = document.querySelectorAll('.filter-btn');
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const allItems = document.querySelectorAll('.card-standalone');
+            allItems.forEach(item => {
+                if (kategori === 'all') {
+                    item.style.display = 'block';
+                } else if (kategori === 'bahari') {
+                    item.style.display = item.classList.contains('item-bahari') ? 'block' : 'none';
+                } else if (kategori === 'gunung') {
+                    item.style.display = item.classList.contains('item-gunung') ? 'block' : 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>

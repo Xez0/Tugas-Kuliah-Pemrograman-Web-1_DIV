@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak & Reservasi - NusantaraVenture | Travel Wisata</title>
+    <title>Reservasi & Kontak Pelayaran - NusantaraVenture</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,16 +18,24 @@
         <div id="header" class="header">
             <div class="header-content">
                 <div class="header-brand">
-                    <div class="logo-circle">&#9992;</div>
-                    <div class="brand-info">
+                    <div class="brand-symbol" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9"/>
+                            <polygon points="12 4 14.5 9.5 20 12 14.5 14.5 12 20 9.5 14.5 4 12 9.5 9.5 12 4" fill="currentColor" opacity="0.3"/>
+                            <line x1="12" y1="3" x2="12" y2="21"/>
+                            <line x1="3" y1="12" x2="21" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
                         <h1 class="site-title">NusantaraVenture</h1>
-                        <p class="site-tagline">Pusat Layanan Pelanggan & Reservasi Tiket Wisata</p>
+                        <p class="site-tagline">Pusat Informasi Operasional & Reservasi Ekspedisi</p>
                     </div>
                 </div>
-                <div class="nim-identity-badge">
-                    <span class="badge-label">Kontak & Reservasi</span>
-                    <span class="badge-nim">NIM: 241011402572</span>
-                    <span class="badge-theme">Tema: Travel Wisata</span>
+
+                <div class="header-academic-tag">
+                    <span class="academic-label">Reservasi & Kontak</span>
+                    <div class="academic-meta">Hadi Sulaiman &bull; 241011402572</div>
+                    <div class="academic-sub">Kelas 05TPLM003 &bull; Variasi Travel Wisata</div>
                 </div>
             </div>
         </div>
@@ -38,39 +46,71 @@
             <!-- SIDEBAR KIRI (Formula NIM: Lebar = 25% / 210px, Margin Antarkolom = 14px) -->
             <div id="sidebar" class="sidebar">
                 
-                <!-- Box Navigasi -->
-                <div class="sidebar-widget">
-                    <h3 class="widget-title">Menu Utama</h3>
-                    <ul class="nav-links">
-                        <li><a href="index.html">&#127968; Beranda</a></li>
-                        <li><a href="destinasi.html">&#127757; Destinasi Populer</a></li>
-                        <li><a href="index.html#content-columns">&#127957; Paket Wisata</a></li>
-                        <li><a href="kontak.html" class="active">&#128222; Kontak & Reservasi</a></li>
+                <!-- Panel Navigasi -->
+                <div class="sidebar-panel">
+                    <h3 class="panel-title">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        Navigasi Rute
+                    </h3>
+                    <ul class="editorial-nav">
+                        <li>
+                            <a href="index.html">
+                                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                                Beranda Ekspedisi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="destinasi.html">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                Katalog Destinasi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#content-columns">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                                Paket Pelayaran
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kontak.html" class="active">
+                                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                Reservasi & Kontak
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- Box Bantuan Cepat -->
-                <div class="sidebar-widget">
-                    <h3 class="widget-title">Pusat Bantuan</h3>
-                    <p style="font-size: 10.5px; color: #475569; margin-bottom: 8px;">Tim kami siap melayani pertanyaan seputar jadwal tur, pembatalan, dan kustomisasi perjalanan.</p>
-                    <p style="font-size: 11px; font-weight: 600; color: #0077b6;">&#9200; Buka 24/7 Setiap Hari</p>
+                <!-- Panel Identitas Mahasiswa -->
+                <div class="sidebar-panel">
+                    <h3 class="panel-title">
+                        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        Identitas Pengembang
+                    </h3>
+                    <table class="student-data-table">
+                        <tr>
+                            <td class="label">Nama</td>
+                            <td class="val">Hadi Sulaiman</td>
+                        </tr>
+                        <tr>
+                            <td class="label">NIM</td>
+                            <td class="val">241011402572</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Kelas</td>
+                            <td class="val">05TPLM003</td>
+                        </tr>
+                    </table>
                 </div>
 
-                <!-- Box Mahasiswa -->
-                <div class="sidebar-widget student-widget">
-                    <h3 class="widget-title">Pengembang Web</h3>
-                    <div class="student-info-card">
-                        <p class="student-name"><strong>Hadi Sulaiman</strong></p>
-                        <p class="student-detail"><strong>NIM:</strong> 241011402572</p>
-                        <p class="student-detail"><strong>Kelas:</strong> 05TPLM003</p>
-                        <p class="student-detail"><strong>Mata Kuliah:</strong> Web 1</p>
-                    </div>
-                </div>
-
-                <!-- Box Garansi Layanan -->
-                <div class="sidebar-widget promo-widget" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-color: #86efac;">
-                    <h3 class="widget-title" style="border-bottom-color: #16a34a; color: #15803d;">Garansi 100%</h3>
-                    <p class="promo-desc" style="color: #166534;">Jaminan pengembalian dana penuh jika jadwal keberangkatan dibatalkan oleh pihak cuaca ekstrem.</p>
+                <!-- Panel Verifikasi Cuaca & Navigasi -->
+                <div class="sidebar-panel">
+                    <h3 class="panel-title">
+                        <svg viewBox="0 0 24 24"><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                        Layanan Siaga
+                    </h3>
+                    <p class="field-note-text">
+                        Kanal radio VHF laut dan sambungan satelit darurat aktif 24 jam untuk seluruh armada kapal pinisi di perairan Indonesia Timur.
+                    </p>
                 </div>
 
             </div>
@@ -78,86 +118,108 @@
             <!-- CONTENT AREA (Formula NIM: Min-Height = 240px, Content Dua Bagian) -->
             <div id="content" class="content-area">
                 
-                <!-- Section Header Konten -->
-                <div class="hero-banner" style="padding: 16px 20px;">
-                    <div class="hero-text">
-                        <h2 style="font-size: 17px; margin-bottom: 4px;">Formulir Kontak & Reservasi</h2>
-                        <p style="font-size: 11px; margin-bottom: 0;">Silakan lengkapi formulir di bawah ini untuk konsultasi jadwal tur atau pemesanan paket wisata impian Anda.</p>
-                    </div>
+                <!-- Editorial Lead Banner -->
+                <div class="editorial-lead">
+                    <div class="editorial-meta-top">Layanan Komunikasi & Keberangkatan</div>
+                    <h2>Konsultasi Rute dan Pengajuan Formulir Reservasi</h2>
+                    <p>
+                        Lengkapi rincian data calon rombongan di bawah ini. Tim logistik lapangan kami akan memverifikasi ketersediaan kabin kapal dan izin masuk kawasan konservasi dalam 1 x 24 jam kerja.
+                    </p>
                 </div>
 
                 <!-- CONTENT DUA BAGIAN (Two-Column Content Area) -->
                 <div class="content-two-columns clearfix">
                     
-                    <!-- KONTEN BAGIAN 1: FORMULIR PEMESANAN -->
+                    <!-- KONTEN BAGIAN 1: FORMULIR RESERVASI -->
                     <div id="content-kolom-1" class="content-col col-left">
-                        <div class="col-header">
-                            <span class="col-icon">&#9997;</span>
-                            <h3 class="col-title">Kirim Pesan / Booking</h3>
-                        </div>
+                        <div class="form-card">
+                            <h3 class="panel-title" style="margin-bottom: 12px;">
+                                <svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                                Formulir Pendaftaran Rute
+                            </h3>
 
-                        <div class="contact-form-box">
-                            <form action="#" method="post" onsubmit="event.preventDefault(); alert('Terima kasih! Permintaan reservasi Anda telah terkirim.');">
-                                <div class="form-group">
-                                    <label for="nama" class="form-label">Nama Lengkap:</label>
-                                    <input type="text" id="nama" class="form-input" placeholder="Masukkan nama Anda..." required>
+                            <form id="booking-form" onsubmit="handleFormSubmit(event)">
+                                <div class="form-row">
+                                    <label for="input-nama" class="form-label">Nama Lengkap Penanggung Jawab:</label>
+                                    <input type="text" id="input-nama" class="form-control" placeholder="Contoh: Hadi Sulaiman" required>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="email" class="form-label">Alamat Email:</label>
-                                    <input type="email" id="email" class="form-input" placeholder="nama@email.com..." required>
+                                <div class="form-row">
+                                    <label for="input-email" class="form-label">Alamat Surat Elektronik:</label>
+                                    <input type="email" id="input-email" class="form-control" placeholder="nama@domain.com" required>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="telepon" class="form-label">Nomor WhatsApp:</label>
-                                    <input type="tel" id="telepon" class="form-input" placeholder="08xxxxxxxxxx..." required>
+                                <div class="form-row">
+                                    <label for="input-telepon" class="form-label">Nomor Seluler / WhatsApp:</label>
+                                    <input type="tel" id="input-telepon" class="form-control" placeholder="08xxxxxxxxxx" required>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="destinasi" class="form-label">Pilihan Destinasi:</label>
-                                    <select id="destinasi" class="form-input">
-                                        <option value="raja-ampat">Kepulauan Raja Ampat (Papua)</option>
-                                        <option value="labuan-bajo">Labuan Bajo & Komodo (NTT)</option>
-                                        <option value="bromo">Taman Nasional Bromo (Jatim)</option>
-                                        <option value="nusa-penida">Nusa Penida Island (Bali)</option>
-                                        <option value="kawah-ijen">Blue Fire Kawah Ijen (Jatim)</option>
+                                <div class="form-row">
+                                    <label for="input-destinasi" class="form-label">Tujuan Wilayah Ekspedisi:</label>
+                                    <select id="input-destinasi" class="form-control">
+                                        <option value="raja-ampat">Kepulauan Raja Ampat (Papua Barat Daya)</option>
+                                        <option value="labuan-bajo">Taman Nasional Komodo (Nusa Tenggara Timur)</option>
+                                        <option value="bromo">Kaldera Pasir Bromo (Jawa Timur)</option>
+                                        <option value="kawah-ijen">Kawah Ijen Blue Fire (Banyuwangi)</option>
+                                        <option value="nusa-penida">Tebing Kelingking Nusa Penida (Bali)</option>
                                     </select>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="pesan" class="form-label">Catatan Tambahan:</label>
-                                    <textarea id="pesan" rows="3" class="form-input" placeholder="Tuliskan jumlah peserta atau permintaan khusus..."></textarea>
+                                <div class="form-row">
+                                    <label for="input-peserta" class="form-label">Jumlah Peserta & Catatan Tambahan:</label>
+                                    <textarea id="input-peserta" rows="3" class="form-control" placeholder="Tuliskan jumlah peserta dan kebutuhan pemandu selam atau bahasa asing..."></textarea>
                                 </div>
 
-                                <button type="submit" class="btn-submit">Kirim Reservasi Sekarang</button>
+                                <button type="submit" class="btn-editorial" style="width: 100%; justify-content: center; padding: 8px;">
+                                    Ajukan Formulir Reservasi
+                                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </button>
+
+                                <div id="form-alert" class="form-status-alert">
+                                    Pengajuan formulir Anda telah dicatat oleh sistem logistik NusantaraVenture. Kami akan menghubungi kontak Anda melalui surel atau telepon resmi.
+                                </div>
                             </form>
                         </div>
                     </div>
 
-                    <!-- KONTEN BAGIAN 2: INFORMASI KANTOR & HUBUNGI -->
+                    <!-- KONTEN BAGIAN 2: DATA KANTOR & POS PENGAMATAN -->
                     <div id="content-kolom-2" class="content-col col-right">
-                        <div class="col-header">
-                            <span class="col-icon">&#128205;</span>
-                            <h3 class="col-title">Kantor Operasional</h3>
-                        </div>
+                        <div class="info-card">
+                            <h3 class="panel-title" style="margin-bottom: 12px;">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
+                                Kantor Pusat & Logistik
+                            </h3>
 
-                        <div class="contact-info-card">
-                            <h4 style="font-size: 12px; color: #0d3b66; margin-bottom: 6px;">Kantor Pusat NusantaraVenture</h4>
-                            <p class="info-line">&#128205; <strong>Alamat:</strong> Jl. Surya Kencana No. 1, Pamulang Barat, Tangerang Selatan, Banten 15417</p>
-                            <p class="info-line">&#128222; <strong>Telepon:</strong> (021) 741-2566</p>
-                            <p class="info-line">&#128241; <strong>WhatsApp:</strong> +62 851-5029-9425</p>
-                            <p class="info-line">&#9993; <strong>Email:</strong> support@nusantaraventure.id</p>
-                            
-                            <hr style="margin: 10px 0; border: none; border-top: 1px solid #e2e8f0;">
-                            
-                            <h4 style="font-size: 12px; color: #0d3b66; margin-bottom: 6px;">Jam Layanan Konsultasi</h4>
-                            <p class="info-line">&#128197; <strong>Senin - Jumat:</strong> 08.00 - 20.00 WIB</p>
-                            <p class="info-line">&#128197; <strong>Sabtu - Minggu:</strong> 09.00 - 17.00 WIB</p>
-                            <p class="info-line" style="color: #16a34a; font-weight: 600;">&#128308; Tim Emergency Call: Siaga 24 Jam</p>
+                            <div class="contact-meta-row">
+                                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <div>
+                                    <strong>Kantor Administrasi Utama:</strong><br>
+                                    Gedung Graha Pamulang, Lantai 3, Jalan Surya Kencana Nomor 1, Pamulang Barat, Kota Tangerang Selatan, Banten 15417.
+                                </div>
+                            </div>
 
-                            <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; padding: 10px; border-radius: 4px; margin-top: 10px;">
-                                <p style="font-size: 10px; color: #166534; line-height: 1.4;">
-                                    <strong>Tips Perjalanan:</strong> Pastikan melakukan konfirmasi jadwal keberangkatan minimal 7 hari kerja sebelum tanggal tur pilihan Anda.
+                            <div class="contact-meta-row">
+                                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <div>
+                                    <strong>Telepon Kantor:</strong> (021) 741-2566<br>
+                                    <strong>Hotline Operasional:</strong> +62 851-5029-9425
+                                </div>
+                            </div>
+
+                            <div class="contact-meta-row">
+                                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                <div>
+                                    <strong>Surat Elektronik Resmi:</strong><br>
+                                    logistik@nusantaraventure.id
+                                </div>
+                            </div>
+
+                            <div style="border-top: 1px solid var(--color-border); padding-top: 10px; margin-top: 10px;">
+                                <h4 style="font-size: 11px; font-weight: 700; color: var(--color-ink); margin-bottom: 4px;">Jam Pelayanan Verifikasi:</h4>
+                                <p style="font-size: 10.5px; color: var(--color-text-muted); line-height: 1.4;">
+                                    Senin sampai Jumat pukul 08.00 hingga 18.00 WIB.<br>
+                                    Sabtu pukul 09.00 hingga 15.00 WIB.<br>
+                                    Minggu dan Libur Nasional: Pemantauan Armada Pelayaran.
                                 </p>
                             </div>
                         </div>
@@ -174,30 +236,45 @@
         <div id="footer" class="footer">
             <div class="footer-columns clearfix">
                 <div class="footer-col footer-about">
-                    <h4 class="footer-heading">&#9992; NusantaraVenture</h4>
-                    <p class="footer-text">Platform terdepan penyedia tur wisata eksplorasi alam dan kepulauan Indonesia secara aman, profesional, dan berkesan.</p>
+                    <h4 class="footer-heading">NusantaraVenture</h4>
+                    <p class="footer-text">
+                        Kanal resmi reservasi pelayaran dan penjelajahan alam Indonesia. Melayani pendaftaran ekspedisi perseorangan maupun kelompok riset akademis.
+                    </p>
                 </div>
                 <div class="footer-col footer-links">
                     <h4 class="footer-heading">Navigasi Halaman</h4>
-                    <ul class="footer-menu">
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="destinasi.html">Destinasi</a></li>
-                        <li><a href="kontak.html">Kontak</a></li>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Beranda Ekspedisi</a></li>
+                        <li><a href="destinasi.html">Katalog Destinasi</a></li>
+                        <li><a href="kontak.html">Kontak & Reservasi</a></li>
                     </ul>
                 </div>
                 <div class="footer-col footer-academic">
-                    <h4 class="footer-heading">Informasi Akademik</h4>
-                    <p class="footer-text">Tugas Pemrograman Web 1 (DIV & CSS)</p>
-                    <p class="footer-text">Nama: Hadi Sulaiman | NIM: 241011402572</p>
+                    <h4 class="footer-heading">Keterangan Akademik</h4>
+                    <p class="footer-text">Praktikum Pemrograman Web 1 (DIV & CSS)</p>
+                    <p class="footer-text">Hadi Sulaiman &bull; NIM 241011402572</p>
                     <p class="footer-text">Universitas Pamulang &copy; 2026</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 NusantaraVenture. Hak Cipta Dilindungi Undang-Undang. Dibuat untuk Penugasan Web 1.</p>
+                &copy; 2026 NusantaraVenture. Seluruh hak cipta dilindungi undang-undang.
             </div>
         </div>
 
     </div>
+
+    <!-- Script Interaktif Penanganan Formulir -->
+    <script>
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const alertBox = document.getElementById('form-alert');
+            alertBox.style.display = 'block';
+            document.getElementById('input-nama').value = '';
+            document.getElementById('input-email').value = '';
+            document.getElementById('input-telepon').value = '';
+            document.getElementById('input-peserta').value = '';
+        }
+    </script>
 
 </body>
 </html>

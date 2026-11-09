@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NusantaraVenture - Travel Wisata Indonesia | Tugas Layout DIV & CSS</title>
+    <title>NusantaraVenture - Jurnal & Ekspedisi Kepulauan Indonesia</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,16 +18,25 @@
         <div id="header" class="header">
             <div class="header-content">
                 <div class="header-brand">
-                    <div class="logo-circle">&#9992;</div>
-                    <div class="brand-info">
+                    <div class="brand-symbol" aria-hidden="true">
+                        <!-- Compass Rose Expedition SVG Icon -->
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9"/>
+                            <polygon points="12 4 14.5 9.5 20 12 14.5 14.5 12 20 9.5 14.5 4 12 9.5 9.5 12 4" fill="currentColor" opacity="0.3"/>
+                            <line x1="12" y1="3" x2="12" y2="21"/>
+                            <line x1="3" y1="12" x2="21" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
                         <h1 class="site-title">NusantaraVenture</h1>
-                        <p class="site-tagline">Jelajahi Eksotisme Destinasi Wisata Terbaik Nusantara</p>
+                        <p class="site-tagline">Jurnal Perjalanan & Ekspedisi Bahari Kepulauan Indonesia</p>
                     </div>
                 </div>
-                <div class="nim-identity-badge">
-                    <span class="badge-label">Tugas Layout DIV & CSS</span>
-                    <span class="badge-nim">NIM: 241011402572</span>
-                    <span class="badge-theme">Tema: Travel Wisata</span>
+
+                <div class="header-academic-tag">
+                    <span class="academic-label">Tugas Pemrograman Web 1</span>
+                    <div class="academic-meta">Hadi Sulaiman &bull; 241011402572</div>
+                    <div class="academic-sub">Kelas 05TPLM003 &bull; Variasi Travel Wisata</div>
                 </div>
             </div>
         </div>
@@ -38,47 +47,97 @@
             <!-- SIDEBAR KIRI (Formula NIM: Lebar = 25% / 210px, Margin Antarkolom = 14px) -->
             <div id="sidebar" class="sidebar">
                 
-                <!-- Box Navigasi -->
-                <div class="sidebar-widget">
-                    <h3 class="widget-title">Menu Utama</h3>
-                    <ul class="nav-links">
-                        <li><a href="index.html" class="active">&#127968; Beranda</a></li>
-                        <li><a href="destinasi.html">&#127757; Destinasi Populer</a></li>
-                        <li><a href="#paket-wisata">&#127957; Paket Wisata</a></li>
-                        <li><a href="#galeri">&#128247; Galeri Wisata</a></li>
-                        <li><a href="kontak.html">&#128222; Kontak & Reservasi</a></li>
+                <!-- Panel Navigasi -->
+                <div class="sidebar-panel">
+                    <h3 class="panel-title">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        Navigasi Rute
+                    </h3>
+                    <ul class="editorial-nav">
+                        <li>
+                            <a href="index.html" class="active">
+                                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                                Beranda Ekspedisi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="destinasi.html">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                Katalog Destinasi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#content-columns">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                                Paket Pelayaran
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kontak.html">
+                                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                Reservasi & Kontak
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- Box Identitas Mahasiswa -->
-                <div class="sidebar-widget student-widget">
-                    <h3 class="widget-title">Identitas Mahasiswa</h3>
-                    <div class="student-info-card">
-                        <div class="avatar-placeholder">&#128100;</div>
-                        <p class="student-name"><strong>Hadi Sulaiman</strong></p>
-                        <p class="student-detail"><strong>NIM:</strong> 241011402572</p>
-                        <p class="student-detail"><strong>Kelas:</strong> 05TPLM003</p>
-                        <p class="student-detail"><strong>Prodi:</strong> Teknik Informatika S-1</p>
-                        <p class="student-detail"><strong>Kampus:</strong> Universitas Pamulang</p>
-                    </div>
+                <!-- Panel Identitas Mahasiswa -->
+                <div class="sidebar-panel">
+                    <h3 class="panel-title">
+                        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        Identitas Pengembang
+                    </h3>
+                    <table class="student-data-table">
+                        <tr>
+                            <td class="label">Nama</td>
+                            <td class="val">Hadi Sulaiman</td>
+                        </tr>
+                        <tr>
+                            <td class="label">NIM</td>
+                            <td class="val">241011402572</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Kelas</td>
+                            <td class="val">05TPLM003</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Prodi</td>
+                            <td class="val">Teknik Informatika</td>
+                        </tr>
+                        <tr>
+                            <td class="label">Kampus</td>
+                            <td class="val">Universitas Pamulang</td>
+                        </tr>
+                    </table>
                 </div>
 
-                <!-- Box Promo Wisata -->
-                <div class="sidebar-widget promo-widget">
-                    <h3 class="widget-title">Promo Eksklusif</h3>
-                    <div class="promo-box-inner">
-                        <span class="promo-discount">Diskon 30%</span>
-                        <p class="promo-desc">Spesial liburan akhir tahun untuk destinasi Raja Ampat & Labuan Bajo!</p>
-                        <a href="kontak.html" class="btn-sidebar">Klaim Promo</a>
-                    </div>
+                <!-- Panel Catatan Musim Pelayaran (Archipelago Field Notes) -->
+                <div class="sidebar-panel">
+                    <h3 class="panel-title">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                        Catatan Lapangan
+                    </h3>
+                    <p class="field-note-text">
+                        Musim pelayaran timur berlangsung optimal antara <span class="field-note-highlight">Oktober hingga April</span> untuk kawasan perairan Raja Ampat dan Banda Neira dengan jarak pandang selam mencapai 30 meter.
+                    </p>
+                    <a href="destinasi.html" class="link-action">
+                        Lihat Panduan Musim
+                        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
                 </div>
 
-                <!-- Box Kontak Cepat -->
-                <div class="sidebar-widget contact-widget">
-                    <h3 class="widget-title">Layanan Pelanggan</h3>
-                    <p class="contact-item">&#128222; +62 851-5029-9425</p>
-                    <p class="contact-item">&#9993; info@nusantaraventure.id</p>
-                    <p class="contact-item">&#128205; Tangerang Selatan, Banten</p>
+                <!-- Panel Kontak Singkat -->
+                <div class="sidebar-panel">
+                    <h3 class="panel-title">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Kantor Operasional
+                    </h3>
+                    <p class="field-note-text" style="margin-bottom: 4px;">
+                        Pamulang Barat, Tangerang Selatan, Banten.
+                    </p>
+                    <p class="field-note-text" style="color: var(--color-ink); font-weight: 600;">
+                        Telepon: (021) 741-2566
+                    </p>
                 </div>
 
             </div>
@@ -86,98 +145,142 @@
             <!-- CONTENT AREA (Formula NIM: Min-Height = 240px, Content Dua Bagian) -->
             <div id="content" class="content-area">
                 
-                <!-- Hero Banner Konten -->
-                <div class="hero-banner">
-                    <div class="hero-text">
-                        <h2>Pesona Nusantara Menanti Petualangan Anda</h2>
-                        <p>Nikmati perjalanan wisata tanpa batas ke pulau-pulau eksotis, keajaiban pegunungan, dan kearifan budaya Indonesia bersama NusantaraVenture.</p>
-                        <a href="#content-columns" class="btn-hero">Eksplorasi Sekarang</a>
-                    </div>
+                <!-- Editorial Lead Banner -->
+                <div class="editorial-lead">
+                    <div class="editorial-meta-top">Laporan Kurasi Ekspedisi Nusantara</div>
+                    <h2>Menjelajahi Garis Wallace dan Kepulauan Rempah Indonesia</h2>
+                    <p>
+                        Dokumentasi rute penjelajahan alam bebas melintasi gugusan atol karang tertua di dunia, kaldera vulkanik aktif, dan habitat satwa endemik pulau tropis bersama kurator berpengalaman.
+                    </p>
                 </div>
 
                 <!-- CONTENT DUA BAGIAN (Two-Column Content Area) -->
                 <div id="content-columns" class="content-two-columns clearfix">
                     
-                    <!-- KONTEN BAGIAN 1: DESTINASI UNGGULAN -->
+                    <!-- KONTEN BAGIAN 1: ZONA BAHARI & KARANG -->
                     <div id="content-kolom-1" class="content-col col-left">
-                        <div class="col-header">
-                            <span class="col-icon">&#128507;</span>
-                            <h3 class="col-title">Destinasi Favorit</h3>
+                        <div class="zone-header">
+                            <span class="zone-title">Zona I: Karang & Laguna</span>
+                            <span class="zone-tag">Bahari Timur</span>
                         </div>
 
-                        <!-- Card 1 -->
-                        <div class="destination-card">
-                            <div class="card-image-wrap">
-                                <img src="images/raja-ampat.jpg" alt="Raja Ampat Papua" class="card-img">
-                                <span class="card-tag">Surga Bahari</span>
+                        <!-- Card 1: Raja Ampat -->
+                        <div class="expedition-card">
+                            <div class="expedition-visual">
+                                <img src="images/raja-ampat.jpg" alt="Kepulauan Karang Raja Ampat" class="expedition-img">
+                                <span class="geo-tag">Papua Barat Daya</span>
                             </div>
-                            <div class="card-content">
-                                <h4 class="card-title">Kepulauan Raja Ampat</h4>
-                                <p class="card-location">&#128205; Papua Barat Daya</p>
-                                <p class="card-text">Gugusan pulau karang dengan keanekaragaman biota laut terlengkap di dunia. Tempat impian bagi penyelam profesional.</p>
-                                <div class="card-footer-info">
-                                    <span class="price-val">Rp 5.750.000</span>
-                                    <a href="destinasi.html" class="btn-card">Detail</a>
+                            <div class="expedition-details">
+                                <h4 class="expedition-name">Gugusan Karang Misool & Wayag</h4>
+                                <div class="expedition-route">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
+                                    Kabupaten Raja Ampat
+                                </div>
+                                <p class="expedition-narrative">
+                                    Pusat segitiga terumbu karang bumi dengan 75 persen spesies karang dunia. Pelayaran kapal kayu tradisional menuju laguna tersembunyi.
+                                </p>
+                                <div class="expedition-footer">
+                                    <div class="tariff-block">
+                                        <span class="tariff-label">Tarif Ekspedisi</span>
+                                        <span class="tariff-amount">Rp 5.750.000</span>
+                                    </div>
+                                    <a href="destinasi.html" class="btn-editorial">
+                                        Rute Detail
+                                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card 2 -->
-                        <div class="destination-card">
-                            <div class="card-image-wrap">
-                                <img src="images/bromo.jpg" alt="Gunung Bromo" class="card-img">
-                                <span class="card-tag">Gunung Berapi</span>
+                        <!-- Card 2: Bromo -->
+                        <div class="expedition-card card-standalone">
+                            <div class="expedition-visual">
+                                <img src="images/bromo.jpg" alt="Kaldera Pasir Tengger Bromo" class="expedition-img">
+                                <span class="geo-tag">Jawa Timur</span>
                             </div>
-                            <div class="card-content">
-                                <h4 class="card-title">Taman Nasional Bromo</h4>
-                                <p class="card-location">&#128205; Jawa Timur</p>
-                                <p class="card-text">Pemandangan matahari terbit kaldera pasir berbisik dan kawah aktif yang megah memanjakan mata setiap pelancong.</p>
-                                <div class="card-footer-info">
-                                    <span class="price-val">Rp 1.450.000</span>
-                                    <a href="destinasi.html" class="btn-card">Detail</a>
+                            <div class="expedition-details">
+                                <h4 class="expedition-name">Kaldera Tengger & Lautan Pasir</h4>
+                                <div class="expedition-route">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
+                                    Taman Nasional Bromo Tengger
+                                </div>
+                                <p class="expedition-narrative">
+                                    Perjalanan dini hari melintasi kaldera vulkanik berpasir hitam menuju bibir kawah aktif bergemuruh di ketinggian 2.329 mdpl.
+                                </p>
+                                <div class="expedition-footer">
+                                    <div class="tariff-block">
+                                        <span class="tariff-label">Tarif Ekspedisi</span>
+                                        <span class="tariff-amount">Rp 1.450.000</span>
+                                    </div>
+                                    <a href="destinasi.html" class="btn-editorial">
+                                        Rute Detail
+                                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- KONTEN BAGIAN 2: PAKET TOUR & PETUALANGAN -->
+                    <!-- KONTEN BAGIAN 2: ZONA SELAT & VULKANIK -->
                     <div id="content-kolom-2" class="content-col col-right">
-                        <div class="col-header">
-                            <span class="col-icon">&#127958;</span>
-                            <h3 class="col-title">Paket Tour Populer</h3>
+                        <div class="zone-header">
+                            <span class="zone-title">Zona II: Selat & Tebing</span>
+                            <span class="zone-tag">Sunda Kecil</span>
                         </div>
 
-                        <!-- Card 3 -->
-                        <div class="destination-card">
-                            <div class="card-image-wrap">
-                                <img src="images/labuan-bajo.jpg" alt="Labuan Bajo Komodo" class="card-img">
-                                <span class="card-tag">Liveaboard</span>
+                        <!-- Card 3: Labuan Bajo -->
+                        <div class="expedition-card">
+                            <div class="expedition-visual">
+                                <img src="images/labuan-bajo.jpg" alt="Kawasan Konservasi Komodo" class="expedition-img">
+                                <span class="geo-tag">Nusa Tenggara Timur</span>
                             </div>
-                            <div class="card-content">
-                                <h4 class="card-title">Komodo & Labuan Bajo</h4>
-                                <p class="card-location">&#128205; Nusa Tenggara Timur</p>
-                                <p class="card-text">Berlayar dengan kapal Phinisi mewah, menjumpai habitat komodo di Pulau Rinca, dan menikmati Pink Beach yang ikonik.</p>
-                                <div class="card-footer-info">
-                                    <span class="price-val">Rp 4.250.000</span>
-                                    <a href="destinasi.html" class="btn-card">Detail</a>
+                            <div class="expedition-details">
+                                <h4 class="expedition-name">Teluk Padar & Habitat Komodo</h4>
+                                <div class="expedition-route">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
+                                    Taman Nasional Komodo
+                                </div>
+                                <p class="expedition-narrative">
+                                    Pelayaran Liveaboard Phinisi melintasi Selat Linta, mendaki punggung bukit Pulau Padar tiga warna, dan memantau biawak purba Komodo.
+                                </p>
+                                <div class="expedition-footer">
+                                    <div class="tariff-block">
+                                        <span class="tariff-label">Tarif Ekspedisi</span>
+                                        <span class="tariff-amount">Rp 4.250.000</span>
+                                    </div>
+                                    <a href="destinasi.html" class="btn-editorial">
+                                        Rute Detail
+                                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card 4 -->
-                        <div class="destination-card">
-                            <div class="card-image-wrap">
-                                <img src="images/nusa-penida.jpg" alt="Nusa Penida Bali" class="card-img">
-                                <span class="card-tag">Island Tour</span>
+                        <!-- Card 4: Nusa Penida -->
+                        <div class="expedition-card card-standalone">
+                            <div class="expedition-visual">
+                                <img src="images/nusa-penida.jpg" alt="Tebing Kelingking Nusa Penida" class="expedition-img">
+                                <span class="geo-tag">Klungkung, Bali</span>
                             </div>
-                            <div class="card-content">
-                                <h4 class="card-title">Nusa Penida Island</h4>
-                                <p class="card-location">&#128205; Klungkung, Bali</p>
-                                <p class="card-text">Eksplorasi tebing Kelingking Beach berbentuk T-Rex, Broken Beach, dan keindahan perairan Angel's Billabong.</p>
-                                <div class="card-footer-info">
-                                    <span class="price-val">Rp 890.000</span>
-                                    <a href="destinasi.html" class="btn-card">Detail</a>
+                            <div class="expedition-details">
+                                <h4 class="expedition-name">Tebing Karst Kelingking & Pasih Uug</h4>
+                                <div class="expedition-route">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"/></svg>
+                                    Selat Badung, Nusa Penida
+                                </div>
+                                <p class="expedition-narrative">
+                                    Formasi tebing terjal purba yang menjorok ke perairan samudra lepas Hindia, berpadu dengan kolam alami Angel Billabong.
+                                </p>
+                                <div class="expedition-footer">
+                                    <div class="tariff-block">
+                                        <span class="tariff-label">Tarif Ekspedisi</span>
+                                        <span class="tariff-amount">Rp 890.000</span>
+                                    </div>
+                                    <a href="destinasi.html" class="btn-editorial">
+                                        Rute Detail
+                                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -186,65 +289,66 @@
 
                 </div>
 
-                <!-- BOX VERIFIKASI KETENTUAN NIM -->
-                <div class="nim-spec-box">
-                    <h3 class="spec-title">&#128221; Parameter Layout Website Berdasarkan NIM: 241011402572</h3>
-                    <div class="spec-table-wrap">
-                        <table class="spec-table">
-                            <thead>
-                                <tr>
-                                    <th>Parameter Penugasan</th>
-                                    <th>Digit NIM</th>
-                                    <th>Formula Perhitungan</th>
-                                    <th>Hasil Implementasi CSS</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Tema Website</strong></td>
-                                    <td>Digit terakhir: <strong>2</strong></td>
-                                    <td>Digit 2 &rarr; Travel Wisata</td>
-                                    <td><span class="tag-badge">Travel Wisata (NusantaraVenture)</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Layout Wajib</strong></td>
-                                    <td>Digit terakhir: <strong>2</strong></td>
-                                    <td>Header, sidebar kiri, content dua bagian, footer</td>
-                                    <td><span class="tag-badge">Header, Sidebar Kiri, Content 2 Bagian, Footer</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Lebar Wrapper</strong></td>
-                                    <td>Digit ke-1 (5 akhir): <strong>0 &rarr; 7</strong></td>
-                                    <td>700 + (7 &times; 20) px</td>
-                                    <td><strong>width: 840px;</strong></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Tinggi Header</strong></td>
-                                    <td>Digit ke-2 (5 akhir): <strong>2</strong></td>
-                                    <td>80 + (2 &times; 10) px</td>
-                                    <td><strong>height: 100px;</strong></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Lebar Sidebar Utama</strong></td>
-                                    <td>Digit ke-3 (5 akhir): <strong>5</strong></td>
-                                    <td>15 + (5 &times; 2)% dari area utama</td>
-                                    <td><strong>width: 25% (210px);</strong></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Jarak Margin Antarkolom</strong></td>
-                                    <td>Digit ke-4 (5 akhir): <strong>7</strong></td>
-                                    <td>7 &times; 2 px</td>
-                                    <td><strong>margin: 14px;</strong></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Tinggi Minimum Content</strong></td>
-                                    <td>Digit ke-5 (5 akhir): <strong>2</strong></td>
-                                    <td>200 + (2 &times; 20) px</td>
-                                    <td><strong>min-height: 240px;</strong></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <!-- LEMBAR KERJA VERIFIKASI PARAMETER NIM -->
+                <div class="spec-ledger">
+                    <div class="ledger-head">
+                        <span class="ledger-title">Lembar Verifikasi Formula NIM Mahasiswa</span>
+                        <span class="ledger-badge">NIM: 241011402572</span>
                     </div>
+                    <table class="ledger-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter Tugas</th>
+                                <th>Variasi Digit</th>
+                                <th>Rumus Penugasan</th>
+                                <th>Nilai CSS Implementasi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Tema Website</strong></td>
+                                <td>Digit terakhir: <strong>2</strong></td>
+                                <td>Digit 2 menghasilkan tema Travel Wisata</td>
+                                <td><span class="code-pill">Travel Wisata (NusantaraVenture)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tata Letak Wajib</strong></td>
+                                <td>Digit terakhir: <strong>2</strong></td>
+                                <td>Header, sidebar kiri, content dua bagian, footer</td>
+                                <td><span class="code-pill">Header, Sidebar Kiri, Content 2 Bagian, Footer</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lebar Wrapper</strong></td>
+                                <td>Digit ke-1: <strong>0 &rarr; 7</strong></td>
+                                <td>700 + (7 &times; 20) px</td>
+                                <td><span class="code-pill">width: 840px;</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tinggi Header</strong></td>
+                                <td>Digit ke-2: <strong>2</strong></td>
+                                <td>80 + (2 &times; 10) px</td>
+                                <td><span class="code-pill">height: 100px;</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lebar Sidebar Utama</strong></td>
+                                <td>Digit ke-3: <strong>5</strong></td>
+                                <td>15 + (5 &times; 2)% dari area utama</td>
+                                <td><span class="code-pill">width: 25% (200px / 210px);</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Jarak Margin Antarkolom</strong></td>
+                                <td>Digit ke-4: <strong>7</strong></td>
+                                <td>7 &times; 2 px</td>
+                                <td><span class="code-pill">margin-right: 14px;</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tinggi Minimum Content</strong></td>
+                                <td>Digit ke-5: <strong>2</strong></td>
+                                <td>200 + (2 &times; 20) px</td>
+                                <td><span class="code-pill">min-height: 240px;</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
             </div>
@@ -255,26 +359,28 @@
         <div id="footer" class="footer">
             <div class="footer-columns clearfix">
                 <div class="footer-col footer-about">
-                    <h4 class="footer-heading">&#9992; NusantaraVenture</h4>
-                    <p class="footer-text">Platform reservasi perjalanan wisata terlengkap dan terpercaya di Indonesia dengan layanan standar internasional.</p>
+                    <h4 class="footer-heading">NusantaraVenture</h4>
+                    <p class="footer-text">
+                        Badan penjelajahan bahari dan alam kepulauan nusantara. Kami memprioritaskan keselamatan pelayaran, pemandu bersertifikasi, dan konservasi alam.
+                    </p>
                 </div>
                 <div class="footer-col footer-links">
                     <h4 class="footer-heading">Navigasi Halaman</h4>
-                    <ul class="footer-menu">
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="destinasi.html">Destinasi</a></li>
-                        <li><a href="kontak.html">Kontak</a></li>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Beranda Ekspedisi</a></li>
+                        <li><a href="destinasi.html">Katalog Destinasi</a></li>
+                        <li><a href="kontak.html">Kontak & Reservasi</a></li>
                     </ul>
                 </div>
                 <div class="footer-col footer-academic">
-                    <h4 class="footer-heading">Informasi Akademik</h4>
+                    <h4 class="footer-heading">Keterangan Akademik</h4>
                     <p class="footer-text">Praktikum Pemrograman Web 1 (DIV & CSS)</p>
-                    <p class="footer-text">Nama: Hadi Sulaiman | NIM: 241011402572</p>
-                    <p class="footer-text">Universitas Pamulang &copy; 2026</p>
+                    <p class="footer-text">Pengembang: Hadi Sulaiman (NIM 241011402572)</p>
+                    <p class="footer-text">Program Studi Teknik Informatika, Universitas Pamulang</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 NusantaraVenture. Hak Cipta Dilindungi Undang-Undang. Dibuat untuk Penugasan Web 1.</p>
+                &copy; 2026 NusantaraVenture. Seluruh hak cipta dilindungi undang-undang.
             </div>
         </div>
 
