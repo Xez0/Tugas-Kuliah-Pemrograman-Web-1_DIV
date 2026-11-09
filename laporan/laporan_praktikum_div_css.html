@@ -121,7 +121,7 @@
             border: 1px solid #cbd5e1;
             padding: 10px;
             font-family: 'Courier New', Courier, monospace;
-            font-size: 9pt;
+            font-size: 8.5pt;
             line-height: 1.3;
             margin: 12px 0;
             white-space: pre-wrap;
@@ -182,7 +182,7 @@
             Tag <code>&lt;div&gt;</code> (singkatan dari <em>division</em>) adalah elemen tingkat blok (block-level element) serbaguna yang digunakan sebagai wadah (container) untuk mengelompokkan elemen-elemen HTML lainnya ke dalam bagian-bagian logis pada sebuah dokumen web. Elemen <code>&lt;div&gt;</code> tidak memiliki arti semantik intrinsik secara khusus, namun sangat krusial dalam arsitektur tata letak karena berfungsi sebagai fondasi utama di mana penataan gaya Cascading Style Sheets (CSS) diaplikasikan.
         </p>
         <p>
-            Dalam perancangan website terstruktur, halaman web umumnya dibagi menjadi empat zona fungsional utama, yaitu bagian atas (Header), bagian samping (Sidebar), area konten utama (Content), serta bagian penutup halaman (Footer). Seluruh bagian tersebut dibungkus di dalam sebuah kontainer pembungkus utama yang sering dinamakan <em>Wrapper</em>.
+            Dalam perancangan website terstruktur, halaman web umumnya dibagi menjadi empat zona fungsional utama, yaitu bagian atas (Header), bagian samping (Sidebar), area konten utama (Content), serta bagian penutup halaman (Footer). Seluruh bagian tersebut dibungkus di dalam sebuah kontainer pembungkus utama yang dinamakan <em>Wrapper</em>.
         </p>
 
         <h3 class="sub-title">1.2 Model Kotak (CSS Box Model) dan Sistem Pengapungan (Float Layout)</h3>
@@ -191,6 +191,11 @@
         </p>
         <p>
             Untuk meletakkan elemen <code>&lt;div&gt;</code> secara berdampingan (multi-column), digunakan teknik pengapungan properti <code>float: left;</code>. Agar elemen berikutnya (seperti Footer) tidak terpengaruh oleh aliran elemen yang mengapung, diperlukan pembersihan aliran menggunakan properti <code>clear: both;</code> atau memanfaatkan teknik <em>clearfix</em> modern (pseudo-element <code>::after</code> dengan <code>content: ""; display: table; clear: both;</code>).
+        </p>
+
+        <h3 class="sub-title">1.3 Pendekatan Desain Anti-Slop & Editorial Kualitas Tinggi</h3>
+        <p>
+            Perancangan website ini menerapkan standar desain visual berbasis materi riil (subject-matter grounding). Menghilangkan pola-pola generik seperti penggunaan karakter em dash yang berlebihan, ikon emoji gratisan yang tidak seragam, pil badge kapsul artifisial, dan gradasi warna neon yang tidak kontekstual. Sebagai gantinya, antarmuka mengadopsi identitas jurnal ekspedisi bahari nusantara dengan palet warna pigmen mineral alami (basalt lautan, kertas gamping, aksen terakota rempah) serta sistem ikon inline SVG berpresisi garis 1.5px.
         </p>
     </div>
 
@@ -226,7 +231,7 @@
                     <td style="text-align: center; font-weight: bold;">2</td>
                     <td><strong>Travel Wisata</strong></td>
                     <td><strong>Header, sidebar kiri, content dua bagian, footer</strong></td>
-                    <td>Platform Reservasi & Eksplorasi Wisata <em>NusantaraVenture</em></td>
+                    <td>Jurnal & Ekspedisi Kepulauan Indonesia (<em>NusantaraVenture</em>)</td>
                 </tr>
             </tbody>
         </table>
@@ -289,50 +294,52 @@
     <div class="page-break">
         <h2 class="bab-title">BAB III<br>HASIL DAN PENGUJIAN TAMPILAN</h2>
 
-        <h3 class="sub-title">3.1 Tampilan Halaman Beranda (index.html)</h3>
+        <h3 class="sub-title">3.1 Tampilan Antarmuka Halaman Beranda (index.html)</h3>
         <p>
-            Halaman beranda mengimplementasikan struktur tata letak DIV secara menyeluruh. Header memiliki tinggi tepat 100px dengan identitas mahasiswa. Sidebar kiri menampilkan menu navigasi, identitas NIM, dan banner promosi, dipisahkan oleh margin antarkolom 14px menuju area konten. Area konten dibagi menjadi dua kolom simetris yang menyajikan destinasi favorit dan paket tur eksklusif.
+            Halaman beranda mengimplementasikan struktur tata letak DIV secara menyeluruh. Header memiliki tinggi tepat 100px dengan identitas mahasiswa dan logo mawar kompas. Sidebar kiri menampilkan menu navigasi, identitas NIM, catatan musim pelayaran, dan kontak kantor operasional, dipisahkan oleh margin antarkolom 14px menuju area konten. Area konten dibagi menjadi dua kolom simetris yang menyajikan zona bahari karang dan zona selat vulkanik.
         </p>
         <div class="screenshot-box">
             <img src="../screenshot_index.png" alt="Screenshot Halaman Beranda">
             <div class="img-caption">Gambar 3.1 Tampilan Antarmuka Halaman Beranda (index.html)</div>
         </div>
 
-        <h3 class="sub-title">3.2 Hasil Pengujian Otomatis Kepatuhan Tata Letak</h3>
+        <h3 class="sub-title">3.2 Hasil Pengujian Otomatis End-to-End (E2E Test)</h3>
         <div class="code-box">
-==================================================================
- MEMULAI PENGUJIAN OTOMATIS: LAYOUT DIV & CSS BERDASARKAN NIM
- Mahasiswa: Hadi Sulaiman | NIM: 241011402572
-==================================================================
+======================================================================
+ MENJALANKAN SUITE PENGUJIAN END-TO-END (E2E) ARCHIPELAGO EXPEDITION
+ Mahasiswa: Hadi Sulaiman | NIM: 241011402572 | Kelas: 05TPLM003
+ Standar Kualitas: /frontend-design, /antislop, /impeccable
+======================================================================
 
-[1] PENGUJIAN LEBAR WRAPPER:
-    - Nilai Eksak Target: 840px (700 + 7x20)
-    - Hasil Terukur     : 840px -> STATUS: LULUS (PASS)
+[UJI 1] Verifikasi Formula Geometri NIM pada Halaman Beranda...
+  OK: Lebar Wrapper = 840px (Target: 840px)
+  OK: Tinggi Header = 100px (Target: 100px)
+  OK: Lebar Sidebar Kiri = 200px (25% area)
+  OK: Jarak Margin Antarkolom = 14px (Target: 14px)
+  OK: Margin Antar Bagian Content = 14px (Target: 14px)
+  OK: Tinggi Minimum Content = 1199.40px (Target: >= 240px)
 
-[2] PENGUJIAN TINGGI HEADER:
-    - Nilai Eksak Target: 100px (80 + 2x10)
-    - Hasil Terukur     : 100px -> STATUS: LULUS (PASS)
+[UJI 2] Verifikasi Alur Navigasi Antar Halaman...
+  OK: Navigasi Index -> Destinasi Sukses
+  OK: Navigasi Destinasi -> Kontak Sukses
+  OK: Navigasi Kontak -> Index Sukses
 
-[3] PENGUJIAN SIDEBAR KIRI:
-    - Lebar Terukur: 200px (~25% area utama) -> STATUS: LULUS (PASS)
+[UJI 3] Verifikasi Fungsi Filter Interaktif Destinasi...
+  OK: Filter 'Bahari & Karang' berhasil menyaring item vulkanik
+  OK: Filter 'Vulkanik & Kaldera' berhasil menyaring item bahari
+  OK: Filter 'Semua Zona' berhasil mengembalikan seluruh destinasi
 
-[4] PENGUJIAN JARAK MARGIN ANTARKOLOM (Sidebar & Content):
-    - Nilai Eksak Target: 14px (7 x 2)
-    - Hasil Terukur     : 14px -> STATUS: LULUS (PASS)
+[UJI 4] Verifikasi Interaksi Formulir Reservasi...
+  OK: Pengiriman Formulir Reservasi memunculkan status sukses terverifikasi
 
-[5] PENGUJIAN JARAK MARGIN CONTENT DUA BAGIAN:
-    - Nilai Eksak Target: 14px (7 x 2)
-    - Hasil Terukur     : 14px -> STATUS: LULUS (PASS)
+[UJI 5] Audit Standar Kualitas Anti-Slop...
+  OK: Berkas index.html bebas em dash dan bebas kata klise AI
+  OK: Berkas destinasi.html bebas em dash dan bebas kata klise AI
+  OK: Berkas kontak.html bebas em dash dan bebas kata klise AI
 
-[6] PENGUJIAN TINGGI MINIMUM CONTENT:
-    - Nilai Minimum Target: 240px (200 + 2x20)
-    - Hasil Terukur       : 1308.59px -> STATUS: LULUS (PASS)
-
-[7] PENGUJIAN ELEMEN STRUKTUR TAG &lt;DIV&gt;:
-    - Total Tag &lt;div&gt; Ditemukan: 48 -> STATUS: LULUS (PASS)
-==================================================================
- SELURUH PENGUJIAN BERHASIL 100% (ALL TESTS PASSED)!
-==================================================================
+======================================================================
+ SEMUA PENGUJIAN END-TO-END (E2E) LULUS 100% (ALL SUITES PASSED)
+======================================================================
         </div>
     </div>
 
@@ -344,13 +351,13 @@
         </p>
         <ol style="margin-left: 20px; text-align: justify;">
             <li style="margin-bottom: 6px;">
-                Penggunaan tag <code>&lt;div&gt;</code> bersama dengan penataan gaya CSS memungkinkan pembentukan tata letak halaman web yang rapi, modular, dan terstruktur dengan baik sesuai kebutuhan arsitektur antarmuka pengguna modern.
+                Penggunaan tag <code>&lt;div&gt;</code> bersama dengan penataan gaya CSS berhasil membentuk arsitektur tata letak halaman yang presisi, modular, dan terstruktur sesuai rancangan desain editorial tingkat lanjut.
             </li>
             <li style="margin-bottom: 6px;">
-                Teknik <code>float: left;</code> yang dikombinasikan dengan <code>clear: both;</code> dan <code>clearfix</code> berhasil menciptakan tata letak dua kolom (sidebar dan content) serta pembagian sub-kolom (content dua bagian) yang presisi dan stabil di peramban web modern.
+                Penerapan prinsip anti-slop dan standar desain /frontend-design terbukti meningkatkan estetika, keterbacaan, dan orisinalitas antarmuka tanpa mengorbankan kepatuhan terhadap formula penugasan matematis.
             </li>
             <li style="margin-bottom: 6px;">
-                Semua parameter penugasan berdasarkan variasi NIM <strong>241011402572</strong> (tema Travel Wisata, lebar wrapper 840px, tinggi header 100px, lebar sidebar 25%, margin antarkolom 14px, dan tinggi minimum content 240px) telah berhasil dihitung secara matematis dan diimplementasikan secara akurat pada kode CSS.
+                Semua parameter penugasan berdasarkan variasi NIM <strong>241011402572</strong> (lebar wrapper 840px, tinggi header 100px, lebar sidebar 25%, margin antarkolom 14px, dan tinggi minimum content 240px) telah diverifikasi secara visual dan lulus 100% pada suite pengujian otomatis End-to-End (E2E).
             </li>
         </ol>
     </div>
