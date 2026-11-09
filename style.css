@@ -613,6 +613,164 @@ textarea:focus-visible {
     stroke-width: 2;
 }
 
+/* ==========================================================================
+   8. WIDGET JURNAL & WARTA LAPANGAN (BERANDA EKSPEDISI)
+   ========================================================================== */
+.editorial-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 12px;
+    margin-bottom: 14px;
+}
+
+.card-kicker {
+    font-size: 9.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-accent-terracotta);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-kicker svg {
+    width: 11px;
+    height: 11px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+
+.editorial-card h4 {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--color-ink);
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.editorial-card p {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.pillar-list {
+    list-style: none;
+    margin: 6px 0 0 0;
+    padding: 0;
+}
+
+.pillar-item {
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--color-border);
+    font-size: 11px;
+}
+
+.pillar-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.pillar-title {
+    font-weight: 700;
+    color: var(--color-ink);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.pillar-desc {
+    color: var(--color-text-muted);
+    font-size: 10.5px;
+    line-height: 1.4;
+}
+
+.dispatch-item {
+    background-color: #faf8f5;
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent-lagoon);
+    padding: 7px 9px;
+    margin-bottom: 8px;
+    border-radius: 0 2px 2px 0;
+}
+
+.dispatch-region {
+    font-size: 9.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: var(--color-accent-lagoon);
+    display: flex;
+    justify-content: space-between;
+}
+
+.dispatch-condition {
+    font-size: 11px;
+    color: var(--color-ink);
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.metrics-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+}
+
+.metric-cell {
+    flex: 1 1 calc(50% - 3px);
+    background-color: #f7f5f0;
+    border: 1px solid var(--color-border);
+    padding: 6px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.metric-val {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--color-accent-terracotta);
+    display: block;
+    line-height: 1.2;
+}
+
+.metric-label {
+    font-size: 9px;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+}
+
+.field-code-list {
+    list-style: none;
+    padding: 0;
+    margin: 6px 0 8px 0;
+}
+
+.field-code-item {
+    font-size: 11px;
+    color: var(--color-ink);
+    margin-bottom: 5px;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.field-code-item::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent-terracotta);
+    font-weight: 700;
+}
+
 
 /* ==========================================================================
    9. HALAMAN KATALOG DESTINASI & FORMULIR KONTAK
