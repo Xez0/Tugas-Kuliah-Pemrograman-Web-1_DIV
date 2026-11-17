@@ -25,48 +25,43 @@ def run_e2e():
         page = browser.new_page(viewport={"width": 1200, "height": 1400})
         
         # -------------------------------------------------------------
-        # UJI 1: FORMULA MATEMATIS NIM PADA INDEX.HTML
+        # UJI 1: VERIFIKASI EKSAK FORMULA NIM DI SELURUH 4 HALAMAN
         # -------------------------------------------------------------
-        print("\n[UJI 1] Verifikasi Formula Geometri NIM pada Halaman Beranda...")
-        page.goto(index_url)
-        
-        # Lebar Wrapper (Target: 840px)
-        wrapper = page.locator("#wrapper")
-        w_box = wrapper.bounding_box()
-        assert abs(w_box["width"] - 840) < 2, f"Lebar wrapper salah: {w_box['width']}"
-        print(f"  OK: Lebar Wrapper = {w_box['width']}px (Target: 840px)")
-        
-        # Tinggi Header (Target: 100px)
-        header = page.locator("#header")
-        h_box = header.bounding_box()
-        assert abs(h_box["height"] - 100) < 2, f"Tinggi header salah: {h_box['height']}"
-        print(f"  OK: Tinggi Header = {h_box['height']}px (Target: 100px)")
-        
-        # Lebar Sidebar (Target: 25% area / ~200px)
-        sidebar = page.locator("#sidebar")
-        s_box = sidebar.bounding_box()
-        assert 190 <= s_box["width"] <= 215, f"Lebar sidebar di luar batas: {s_box['width']}"
-        print(f"  OK: Lebar Sidebar Kiri = {s_box['width']}px (25% area)")
-        
-        # Jarak Margin Antarkolom (Target: 14px)
-        content = page.locator("#content")
-        c_box = content.bounding_box()
-        col_gap = c_box["x"] - (s_box["x"] + s_box["width"])
-        assert abs(col_gap - 14) < 2, f"Margin antarkolom salah: {col_gap}"
-        print(f"  OK: Jarak Margin Antarkolom = {col_gap}px (Target: 14px)")
-        
-        # Content Dua Bagian (Target gap: 14px)
-        col1 = page.locator("#content-kolom-1")
-        col2 = page.locator("#content-kolom-2")
-        b1 = col1.bounding_box()
-        b2 = col2.bounding_box()
-        inner_gap = b2["x"] - (b1["x"] + b1["width"])
-        assert abs(inner_gap - 14) < 2, f"Margin antar bagian content salah: {inner_gap}"
-        print(f"  OK: Margin Antar Bagian Content = {inner_gap}px (Target: 14px)")
-        
-        # Tinggi Minimum Content (Target: >= 240px)
-        assert c_box["height"] >= 240, f"Tinggi content kurang: {c_box['height']}"
-        print(f"  OK: Tinggi Minimum Content = {c_box['height']}px (Target: >= 240px)")
+        print("\n[UJI 1] Verifikasi Formula Geometri NIM Eksak di Seluruh Halaman...")
+        for name, url in [
+            ("index.html", index_url),
+            ("destinasi.html", destinasi_url),
+            ("paket.html", paket_url),
+            ("kontak.html", kontak_url),
+        ]:
+            page.goto(url)
+            w_box = page.locator("#wrapper").bounding_box()
+            h_box = page.locator("#header").bounding_box()
+            s_box = page.locator("#sidebar").bounding_box()
+            c_box = page.locator("#content").bounding_box()
+            b1 = page.locator("#content-kolom-1").bounding_box()
+            b2 = page.locator("#content-kolom-2").bounding_box()
+            f_box = page.locator("#footer").bounding_box()
+
+            col_gap = c_box["x"] - (s_box["x"] + s_box["width"])
+            inner_gap = b2["x"] - (b1["x"] + b1["width"])
+            min_h = page.locator("#content").evaluate("el => getComputedStyle(el).minHeight")
+            col_min_h = page.locator("#content-kolom-1").evaluate("el => getComputedStyle(el).minHeight")
+            tags = page.evaluate("() => ['#wrapper','#header','#sidebar','#content','#content-kolom-1','#content-kolom-2','#footer'].map(s => document.querySelector(s).tagName)")
+
+            assert abs(w_box["width"] - 840) < 1, f"{name}: lebar wrapper {w_box['width']} != 840"
+            assert abs(h_box["height"] - 100) < 1, f"{name}: tinggi header {h_box['height']} != 100"
+            assert abs(s_box["width"] - 210) < 1, f"{name}: lebar sidebar {s_box['width']} != 210 (25% dari 840)"
+            assert abs(col_gap - 14) < 1, f"{name}: margin antarkolom {col_gap} != 14"
+            assert abs(inner_gap - 14) < 1, f"{name}: margin 2 bagian content {inner_gap} != 14"
+            assert abs(b1["width"] - b2["width"]) < 1, f"{name}: dua bagian content tidak simetris ({b1['width']} vs {b2['width']})"
+            assert min_h == "240px" and col_min_h == "240px", f"{name}: min-height bukan 240px ({min_h}, {col_min_h})"
+            assert c_box["height"] >= 240, f"{name}: tinggi content {c_box['height']} < 240"
+            assert s_box["x"] < c_box["x"], f"{name}: sidebar bukan di kiri content"
+            assert f_box["y"] >= max(s_box["y"] + s_box["height"], c_box["y"] + c_box["height"]) - 1, f"{name}: footer overlap"
+            assert all(t == "DIV" for t in tags), f"{name}: ada struktur non-DIV {tags}"
+            assert page.locator("link[rel='icon']").count() == 1, f"{name}: favicon belum tertaut"
+            print(f"  OK [{name}]: wrapper=840px, header=100px, sidebar=210px (25%), gap=14px, content={c_box['height']:.1f}px (>=240px)")
 
         # -------------------------------------------------------------
         # UJI 2: NAVIGASI LENGKAP SEMUA HALAMAN (E2E FLOW)
