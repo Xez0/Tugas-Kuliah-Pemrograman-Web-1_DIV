@@ -58,16 +58,16 @@ Lima digit terakhir dari kiri ke kanan: **`0, 2, 5, 7, 2`**
 ---
 
 ## 3. Verifikasi Geometri & Presisi Tata Letak (Box Model)
-Semua ukuran kolom telah diverifikasi dengan presisi piksel:
+Semua ukuran kolom telah diverifikasi dengan presisi piksel (`box-sizing: border-box`):
 $$\begin{aligned}
-\text{Lebar Area Utama} &= 840\text{ px} \\
-\text{Lebar Sidebar Kiri} &= 200\text{ px (25\% area dalam)} \\
+\text{Lebar Wrapper \& Area Utama} &= 840\text{ px} \\
+\text{Lebar Sidebar Kiri} &= 25\% \times 840\text{ px} = 210\text{ px} \\
 \text{Margin Antarkolom} &= 14\text{ px} \\
-\text{Lebar Area Content} &= 840\text{ px} - (14\text{ px} \times 2\text{ padding}) - 200\text{ px} - 14\text{ px} = 598\text{ px} \\
-\text{Lebar Kolom 1 (Kiri)} &= \frac{598\text{ px} - 14\text{ px}}{2} = 292\text{ px} \\
+\text{Lebar Area Content} &= 75\% - 14\text{ px} = 630\text{ px} - 14\text{ px} = 616\text{ px (Area dalam: } 602\text{ px)} \\
+\text{Lebar Kolom 1 (Kiri)} &= \frac{602\text{ px} - 14\text{ px}}{2} = 294\text{ px} \\
 \text{Margin Antar Bagian Content} &= 14\text{ px} \\
-\text{Lebar Kolom 2 (Kanan)} &= 292\text{ px} \\
-\text{Total Lebar Bagian Content} &= 292\text{ px} + 14\text{ px} + 292\text{ px} = 598\text{ px} \quad (\text{Presisi 100\%})
+\text{Lebar Kolom 2 (Kanan)} &= 294\text{ px} \\
+\text{Total Baris Utama} &= 210\text{ px} + 14\text{ px} + 616\text{ px} = 840\text{ px} \quad (\text{Presisi 100\%})
 \end{aligned}$$
 
 ---
@@ -83,6 +83,7 @@ Tugas-Kuliah-Pemrograman-Web-1_DIV/
 ├── style.css                   # Berkas Eksternal CSS Tata Letak DIV & Aturan Formula NIM
 ├── DESIGN.md                   # Spesifikasi Token Desain, Palet Warna & Prinsip Anti-Slop
 ├── images/                     # Direktori Aset Media & Fotografi Wisata
+│   ├── favicon.svg             # Favicon Vektor Kapal Pinisi
 │   ├── petunjuk_tugas.jpg      # Foto Panduan Soal Penugasan Dosen
 │   ├── hero-marine.jpg         # Banner Header Wisata
 │   ├── raja-ampat.jpg          # Destinasi Raja Ampat, Papua Barat Daya
